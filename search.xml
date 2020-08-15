@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search>
+  <entry>
+    <title>第一次搭建博客</title>
+    <url>/2020/03/07/My-First-Page/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p> em…这是第一次搭建博客，网上到处找教程，东拼西凑。发现有时候跟着步骤走都经常出现Bug，让人伤脑筋，改来改去，磕磕碰碰，耗费了大量时间(不过确实感觉有点上瘾)，有的时候都不记得自己改动过什么就莫名其妙的好了？？？而且经常发现自己的主题目录和教程中对不上，一度怀疑是安了个假的NexT，最后到官方那里查才发现是版本更新，导致好多东西都发生了改变(绝望)，不过还好，花费了大量的时间也算是小有成果，终于拥有了一个属于自己的Blog，也感性一回，随性写一写搭建博客的心路历程（其实是练练markdown语法）</p>
+<a id="more"></a>
+<!--一点小小的感想-->
+<h2 id="从代码开始"><a href="#从代码开始" class="headerlink" title="从代码开始"></a>从代码开始</h2><p>不管那么多，先码个代码上去试试效果</p>
+<figure class="highlight c++"><figcaption><span>放苹果问题</span></figcaption><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">f</span><span class="params">(<span class="keyword">int</span> m,<span class="keyword">int</span> n)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">if</span> (n &gt; m)</span><br><span class="line">    <span class="keyword">return</span> f(m, m);</span><br><span class="line">    <span class="keyword">if</span> (m == <span class="number">0</span>)</span><br><span class="line">    <span class="keyword">return</span> <span class="number">1</span>;</span><br><span class="line">    <span class="keyword">if</span> (n == <span class="number">0</span>)</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">return</span> f(m, n<span class="number">-1</span>) + f(m-n, n);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> t;</span><br><span class="line">    <span class="keyword">int</span> m, n;</span><br><span class="line">    <span class="built_in">cin</span> &gt;&gt; t;</span><br><span class="line">    <span class="keyword">while</span>(t--) &#123;</span><br><span class="line">        <span class="built_in">cin</span> &gt;&gt; m &gt;&gt; n;</span><br><span class="line">        <span class="built_in">cout</span> &lt;&lt; f(m, n) &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p><del>突然发现代码没有高亮！得想个办法解决！</del><br>哎呀，总算好了解决了！（我也不知道那个是什么玩意，反正改成false就好了）<br>经一位友人的建议，将代码做了些调整，话说在符号周围加空格真的不太习惯</p>
+<h2 id="一些小改进"><a href="#一些小改进" class="headerlink" title="一些小改进"></a>一些小改进</h2><h3 id="关于评论系统"><a href="#关于评论系统" class="headerlink" title="关于评论系统"></a>关于评论系统</h3><div class="note primary">
+            <p>把评论系统从来必力改成了valine，显得更加简洁一点，用起来也感觉较为便捷（试了一下，效果还不错）</p>
+          </div>
+
+<h3 id="更改了背景板"><a href="#更改了背景板" class="headerlink" title="更改了背景板"></a>更改了背景板</h3><div class="note info">
+            <p>将背景和侧栏都改动了一下</p>
+          </div>
+
+<h3 id="增加了特色的返回顶部"><a href="#增加了特色的返回顶部" class="headerlink" title="增加了特色的返回顶部"></a>增加了特色的返回顶部</h3><div class="note success">
+            <p>把返回顶部换成了小猫上吊（有点花里胡哨，不过效果还行），怀疑是否会对侧栏的使用产生影响，原理嘛好像是把默认的返回标志换了个图标</p>
+          </div>
+
+<h3 id="调整了界面排版"><a href="#调整了界面排版" class="headerlink" title="调整了界面排版"></a>调整了界面排版</h3><div class="note warning">
+            <p>因为Mist主题的默认排版是左对齐，看的让人不太舒服，所以到网上查了查，将标题，阅读全文还有底部的站点信息调至居中。同时还调整了一下Mist主题的一些配置，增加了一些文章阴影效果，使博客界面再也不是全透明的（全透明会因为背景的色调影响正常的阅读），光是这个就花了我好多时间（虽然我现在也不知道是什么原理，反正在google上复制粘贴就完事了）</p>
+          </div>
+
+<hr>
+<h3 id="添加了Aplayer的音乐播放器（代价惨烈）"><a href="#添加了Aplayer的音乐播放器（代价惨烈）" class="headerlink" title="添加了Aplayer的音乐播放器（代价惨烈）"></a>添加了Aplayer的音乐播放器（代价惨烈）</h3><p><strong>更新于3-10</strong><br>记录一下昨天的悲惨经历，我沉痛地失去了我的<span class="label info">鼠标点击特效</span>，半个下午在玩弄如何用<span class="label danger">Aplayer播放器</span>，结果播放器没搞好，不知道调了什么地方，导致点击特效失效了（/拍桌），就算重新调一遍也无济于事。晚上的神经网络导论更是听天书（为什么当时没有果断一点把它退掉），掉进坑里去了。不过还在晚些时候折腾了一番，把音乐播放器的事情解决了（又找到了通过网易云音乐获取外链的方法），但是鼠标特效还是回不来了（黑脸）。</p>
+]]></content>
+      <categories>
+        <category>随笔</category>
+      </categories>
+      <tags>
+        <tag>有感而发</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Google C++ 编程规范</title>
+    <url>/2020/03/16/Google-C-Style/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><center>本文参考Google C++风格指南，进行了一些有舍取的摘录，以增强版面的规范与观赏性</center>
+<a id="more"></a>
+
+<h2 id="头文件"><a href="#头文件" class="headerlink" title="头文件"></a>头文件</h2><h3 id="内联函数"><a href="#内联函数" class="headerlink" title="内联函数"></a>内联函数</h3><p>只有当函数只有 10 行甚至更少时才将其定义为内联函数.</p>
+<h3 id="前置声明"><a href="#前置声明" class="headerlink" title="前置声明"></a>前置声明</h3><p>尽可能地避免使用前置声明。使用 #include 包含需要的头文件即可。</p>
+<h3 id="include-的路径及顺序"><a href="#include-的路径及顺序" class="headerlink" title="#include 的路径及顺序"></a>#include 的路径及顺序</h3><p>又如, dir/foo.cc 或 dir/foo_test.cc 的主要作用是实现或测试 dir2/foo2.h 的功能, foo.cc 中包含头文件的次序如下:</p>
+<ol>
+<li>dir2/foo2.h (优先位置)</li>
+<li>C 系统文件</li>
+<li>C++ 系统文件</li>
+<li>其他库的 .h 文件</li>
+<li>本项目内 .h 文件</li>
+</ol>
+<h2 id="作用域"><a href="#作用域" class="headerlink" title="作用域"></a>作用域</h2><h3 id="非成员函数、静态成员函数和全局函数"><a href="#非成员函数、静态成员函数和全局函数" class="headerlink" title="非成员函数、静态成员函数和全局函数"></a>非成员函数、静态成员函数和全局函数</h3><p>使用静态成员函数或命名空间内的非成员函数, 尽量不要用裸的全局函数. 将一系列函数直接置于命名空间中，不要用类的静态方法模拟出命名空间的效果，类的静态方法应当和类的实例或静态数据紧密相关.</p>
+<h3 id="局部变量"><a href="#局部变量" class="headerlink" title="局部变量"></a>局部变量</h3><p>将函数变量尽可能置于最小作用域内, 并在变量声明时进行初始化.</p>
+<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="keyword">int</span> i;</span><br><span class="line">i = f(); <span class="comment">// 坏——初始化和声明分离</span></span><br><span class="line"><span class="keyword">int</span> j = g(); <span class="comment">// 好——初始化时声明</span></span><br><span class="line"><span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt; v;</span><br><span class="line">v.push_back(<span class="number">1</span>); <span class="comment">// 用花括号初始化更好</span></span><br><span class="line">v.push_back(<span class="number">2</span>);</span><br><span class="line"><span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt; v = &#123;<span class="number">1</span>, <span class="number">2</span>&#125;; <span class="comment">// 好——v 一开始就初始化</span></span><br></pre></td></tr></table></figure>
+
+<p>属于 if, while 和 for 语句的变量应当在这些语句中正常地声明，这样子这些变量的作用域就被限制在这些语句中了.<br><code>while (const char* p = strchr(str, &#39;/&#39;)) str = p + 1;</code><br>有一个例外, 如果变量是一个对象, 每次进入作用域都要调用其构造函数, 每次退出作用域都要调用其析构函数. 这会导致效率降低.</p>
+<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="comment">// 低效的实现</span></span><br><span class="line"><span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; <span class="number">1000000</span>; ++i) &#123;</span><br><span class="line">    Foo f;                  <span class="comment">// 构造函数和析构函数分别调用 1000000 次!</span></span><br><span class="line">    f.DoSomething(i);</span><br><span class="line">&#125;</span><br><span class="line">Foo f;                      <span class="comment">// 构造函数和析构函数只调用 1 次</span></span><br><span class="line"><span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; <span class="number">1000000</span>; ++i) &#123;</span><br><span class="line">    f.DoSomething(i);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="函数"><a href="#函数" class="headerlink" title="函数"></a>函数</h2><h3 id="参数顺序"><a href="#参数顺序" class="headerlink" title="参数顺序"></a>参数顺序</h3><p>函数的参数顺序为: 输入参数在先, 后跟输出参数.</p>
+<h3 id="引用参数"><a href="#引用参数" class="headerlink" title="引用参数"></a>引用参数</h3><p>所有按引用传递的参数必须加上 const.<br><code>void Foo(const string &amp;in, string *out);</code><br>输入参数是值参或 const 引用, 输出参数为指针. 输入参数可以是 const 指针, 但决不能是非 const 的引用参数, 除非特殊要求, 比如 swap().</p>
+<h3 id="函数重载"><a href="#函数重载" class="headerlink" title="函数重载"></a>函数重载</h3><p>你可以编写一个参数类型为 const string&amp; 的函数, 然后用另一个参数类型为 const char* 的函数对其进行重载:</p>
+<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">MyClass</span> &#123;</span></span><br><span class="line">    <span class="keyword">public</span>:</span><br><span class="line">    <span class="function"><span class="keyword">void</span> <span class="title">Analyze</span><span class="params">(<span class="keyword">const</span> <span class="built_in">string</span> &amp;<span class="built_in">text</span>)</span></span>;</span><br><span class="line">    <span class="function"><span class="keyword">void</span> <span class="title">Analyze</span><span class="params">(<span class="keyword">const</span> <span class="keyword">char</span> *<span class="built_in">text</span>, <span class="keyword">size_t</span> textlen)</span></span>;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+
+<h3 id="缺省参数"><a href="#缺省参数" class="headerlink" title="缺省参数"></a>缺省参数</h3><p>只允许在非虚函数中使用缺省参数, 且必须保证缺省参数的值始终一致. 缺省参数与函数重载遵循同样的规则. 一般情况下建议使用函数重载, 尤其是在缺省函数带来的可读性提升不能弥补下文中所提到的缺点的情况下.</p>
+<h2 id="命名约定"><a href="#命名约定" class="headerlink" title="命名约定"></a>命名约定</h2><h3 id="通用命名规则"><a href="#通用命名规则" class="headerlink" title="通用命名规则"></a>通用命名规则</h3><p>函数命名, 变量命名, 文件命名要有描述性; 少用缩写.</p>
+<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="keyword">int</span> price_count_reader;    <span class="comment">// 无缩写</span></span><br><span class="line"><span class="keyword">int</span> num_errors;            <span class="comment">// "num" 是一个常见的写法</span></span><br><span class="line"><span class="keyword">int</span> num_dns_connections;   <span class="comment">// 人人都知道 "DNS" 是什么</span></span><br><span class="line"><span class="keyword">int</span> n;                     <span class="comment">// 毫无意义.</span></span><br><span class="line"><span class="keyword">int</span> nerr;                  <span class="comment">// 含糊不清的缩写.</span></span><br><span class="line"><span class="keyword">int</span> n_comp_conns;          <span class="comment">// 含糊不清的缩写.</span></span><br><span class="line"><span class="keyword">int</span> wgc_connections;       <span class="comment">// 只有贵团队知道是什么意思.</span></span><br><span class="line"><span class="keyword">int</span> pc_reader;             <span class="comment">// "pc" 有太多可能的解释了.</span></span><br><span class="line"><span class="keyword">int</span> cstmr_id;              <span class="comment">// 删减了若干字母.</span></span><br></pre></td></tr></table></figure>
+
+<p>注意, 一些特定的广为人知的缩写是允许的, 例如用 i 表示迭代变量和用 T 表示模板参数.</p>
+<h3 id="文件命名"><a href="#文件命名" class="headerlink" title="文件命名"></a>文件命名</h3><p>文件名要全部小写, 可以包含下划线 (_) 或连字符 (-), 依照项目的约定. 如果没有约定, 那么 “_” 更好.</p>
+<h3 id="类型命名"><a href="#类型命名" class="headerlink" title="类型命名"></a>类型命名</h3><p>类型名称的每个单词首字母均大写, 不包含下划线: MyExcitingClass, MyExcitingEnum.</p>
+<h3 id="变量命名"><a href="#变量命名" class="headerlink" title="变量命名"></a>变量命名</h3><p>变量 (包括函数参数) 和数据成员名一律小写, 单词之间用下划线连接. 类的成员变量以下划线结尾, 但结构体的就不用, 如: a_local_variable, a_struct_data_member, a_class_data_member_.</p>
+<figure class="highlight c++"><figcaption><span>普通变量命名</span></figcaption><table><tr><td class="code"><pre><span class="line"><span class="built_in">string</span> table_name;  <span class="comment">// 好 - 用下划线.</span></span><br><span class="line"><span class="built_in">string</span> tablename;   <span class="comment">// 好 - 全小写.</span></span><br><span class="line"><span class="built_in">string</span> tableName;  <span class="comment">// 差 - 混合大小写</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight c++"><figcaption><span>类数据成员</span></figcaption><table><tr><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">TableInfo</span> &#123;</span></span><br><span class="line">  ...</span><br><span class="line"> <span class="keyword">private</span>:</span><br><span class="line">  <span class="built_in">string</span> table_name_;  <span class="comment">// 好 - 后加下划线.</span></span><br><span class="line">  <span class="built_in">string</span> tablename_;   <span class="comment">// 好.</span></span><br><span class="line">  <span class="keyword">static</span> Pool&lt;TableInfo&gt;* pool_;  <span class="comment">// 好.</span></span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight c++"><figcaption><span>结构体变量</span></figcaption><table><tr><td class="code"><pre><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">UrlTableProperties</span> &#123;</span></span><br><span class="line">  <span class="built_in">string</span> name;</span><br><span class="line">  <span class="keyword">int</span> num_entries;</span><br><span class="line">  <span class="keyword">static</span> Pool&lt;UrlTableProperties&gt;* pool;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+
+<h3 id="常量命名"><a href="#常量命名" class="headerlink" title="常量命名"></a>常量命名</h3><p>声明为 constexpr 或 const 的变量, 或在程序运行期间其值始终保持不变的, 命名时以 “k” 开头, 大小写混合. 例如:<code>const int kDaysInAWeek = 7;</code></p>
+<h3 id="函数命名"><a href="#函数命名" class="headerlink" title="函数命名"></a>函数命名</h3><p>常规函数使用大小写混合, 取值和设值函数则要求与变量名匹配: MyExcitingFunction(), MyExcitingMethod(), my_exciting_member_variable(), set_my_exciting_member_variable().<br>一般来说, 函数名的每个单词首字母大写 (即 <span class="label info">“驼峰变量名”</span> 或 <span class="label danger">“帕斯卡变量名”</span>), 没有下划线. 对于首字母缩写的单词, 更倾向于将它们视作一个单词进行首字母大写</p>
+<h2 id="格式"><a href="#格式" class="headerlink" title="格式"></a>格式</h2><h3 id="行长度"><a href="#行长度" class="headerlink" title="行长度"></a>行长度</h3><ul>
+<li>80 个字符是最大值.</li>
+<li>如果无法在不伤害易读性的条件下进行断行, 那么注释行可以超过 80 个字符, 这样可以方便复制粘贴. 例如, 带有命令示例或 URL 的行可以超过 80 个字符.</li>
+<li>包含长路径的 #include 语句可以超出80列.</li>
+<li>头文件保护 可以无视该原则.</li>
+</ul>
+<h3 id="函数声明与定义"><a href="#函数声明与定义" class="headerlink" title="函数声明与定义"></a>函数声明与定义</h3><figure class="highlight c++"><figcaption><span>三种情况</span></figcaption><table><tr><td class="code"><pre><span class="line"><span class="function">ReturnType <span class="title">ClassName::FunctionName</span><span class="params">(Type par_name1, Type par_name2)</span> </span>&#123;</span><br><span class="line">  DoSomething();</span><br><span class="line">  ...</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function">ReturnType <span class="title">ClassName::ReallyLongFunctionName</span><span class="params">(Type par_name1, Type par_name2,</span></span></span><br><span class="line"><span class="function"><span class="params">                                             Type par_name3)</span> </span>&#123;</span><br><span class="line">  DoSomething();</span><br><span class="line">  ...</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function">ReturnType <span class="title">LongClassName::ReallyReallyReallyLongFunctionName</span><span class="params">(</span></span></span><br><span class="line"><span class="function"><span class="params">    Type par_name1,  <span class="comment">// 4 space indent</span></span></span></span><br><span class="line"><span class="function"><span class="params">    Type par_name2,</span></span></span><br><span class="line"><span class="function"><span class="params">    Type par_name3)</span> </span>&#123;</span><br><span class="line">  DoSomething();  <span class="comment">// 2 space indent</span></span><br><span class="line">  ...</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>注意:</p>
+<ul>
+<li>使用好的参数名.</li>
+<li>只有在参数未被使用或者其用途非常明显时, 才能省略参数名.</li>
+<li>如果返回类型和函数名在一行放不下, 分行.</li>
+<li>如果返回类型与函数声明或定义分行了, 不要缩进.</li>
+<li>左圆括号总是和函数名在同一行.</li>
+<li>函数名和左圆括号间永远没有空格.</li>
+<li>圆括号与参数间没有空格.</li>
+<li>左大括号总在最后一个参数同一行的末尾处, 不另起新行.</li>
+<li>右大括号总是单独位于函数最后一行, 或者与左大括号同一行.</li>
+<li>右圆括号和左大括号间总是有一个空格.</li>
+<li>所有形参应尽可能对齐.</li>
+<li>缺省缩进为 2 个空格.</li>
+<li>换行后的参数保持 4 个空格的缩进.</li>
+</ul>
+<h3 id="函数调用"><a href="#函数调用" class="headerlink" title="函数调用"></a>函数调用</h3><p>要么一行写完函数调用, 要么在圆括号里对参数分行, 要么参数另起一行且缩进四格. 如果没有其它顾虑的话, 尽可能精简行数, 比如把多个参数适当地放在同一行里.</p>
+<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="keyword">bool</span> retval = DoSomething(argument1, argument2, argument3);</span><br><span class="line"></span><br><span class="line"><span class="keyword">bool</span> retval = DoSomething(averyveryveryverylongargument1,</span><br><span class="line">                          argument2, argument3);</span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> (...) &#123;</span><br><span class="line">  ...</span><br><span class="line">  ...</span><br><span class="line">  <span class="keyword">if</span> (...) &#123;</span><br><span class="line">    DoSomething(</span><br><span class="line">        argument1, argument2,  <span class="comment">// 4 空格缩进</span></span><br><span class="line">        argument3, argument4);</span><br><span class="line">  &#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="条件语句"><a href="#条件语句" class="headerlink" title="条件语句"></a>条件语句</h3><p>注意所有情况下 if 和左圆括号间都有个空格. 右圆括号和左大括号之间也要有个空格:</p>
+<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="keyword">if</span>(condition)     <span class="comment">// 差 - IF 后面没空格.</span></span><br><span class="line"><span class="keyword">if</span> (condition)&#123;   <span class="comment">// 差 - &#123; 前面没空格.</span></span><br><span class="line"><span class="keyword">if</span>(condition)&#123;    <span class="comment">// 变本加厉地差.</span></span><br><span class="line"><span class="keyword">if</span> (condition) &#123;  <span class="comment">// 好 - IF 和 &#123; 都与空格紧邻.</span></span><br></pre></td></tr></table></figure>
+
+<p>如果能增强可读性, 简短的条件语句允许写在同一行. 只有当语句简单并且没有使用 else 子句时使用:</p>
+<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="keyword">if</span> (x == kFoo) <span class="keyword">return</span> <span class="keyword">new</span> Foo();</span><br><span class="line"><span class="keyword">if</span> (x == kBar) <span class="keyword">return</span> <span class="keyword">new</span> Bar();</span><br></pre></td></tr></table></figure>
+
+<p>如果语句有 else 分支则不允许:</p>
+<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="comment">// 不允许 - 当有 ELSE 分支时 IF 块却写在同一行</span></span><br><span class="line"><span class="keyword">if</span> (x) DoThis();</span><br><span class="line"><span class="keyword">else</span> DoThat();</span><br></pre></td></tr></table></figure>
+
+<p>但如果语句中某个 if-else 分支使用了大括号的话, 其它分支也必须使用:</p>
+<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="comment">// 只要其中一个分支用了大括号, 两个分支都要用上大括号.</span></span><br><span class="line"><span class="keyword">if</span> (condition) &#123;</span><br><span class="line">  foo;</span><br><span class="line">&#125; <span class="keyword">else</span> &#123;</span><br><span class="line">  bar;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="循环和switch语句"><a href="#循环和switch语句" class="headerlink" title="循环和switch语句"></a>循环和switch语句</h3><p>如果有不满足 case 条件的枚举值, switch 应该总是包含一个 default 匹配 (如果有输入值没有 case 去处理, 编译器将给出 warning). 如果 default 应该永远执行不到, 简单的加条 assert:</p>
+<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="keyword">switch</span> (var) &#123;</span><br><span class="line">  <span class="keyword">case</span> <span class="number">0</span>: &#123;  <span class="comment">// 2 空格缩进</span></span><br><span class="line">    ...      <span class="comment">// 4 空格缩进</span></span><br><span class="line">    <span class="keyword">break</span>;</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">case</span> <span class="number">1</span>: &#123;</span><br><span class="line">    ...</span><br><span class="line">    <span class="keyword">break</span>;</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">default</span>: &#123;</span><br><span class="line">    assert(<span class="literal">false</span>);</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>在单语句循环里, 括号可用可不用：</p>
+<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; kSomeNumber; ++i)</span><br><span class="line">  <span class="built_in">printf</span>(<span class="string">"I love you\n"</span>);</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; kSomeNumber; ++i) &#123;</span><br><span class="line">  <span class="built_in">printf</span>(<span class="string">"I take it back\n"</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>空循环体应使用 {} 或 continue, 而不是一个简单的分号.</p>
+<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="keyword">while</span> (condition) &#123;</span><br><span class="line">  <span class="comment">// 反复循环直到条件失效.</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; kSomeNumber; ++i) &#123;&#125;  <span class="comment">// 可 - 空循环体.</span></span><br><span class="line"><span class="keyword">while</span> (condition) <span class="keyword">continue</span>;  <span class="comment">// 可 - contunue 表明没有逻辑.</span></span><br><span class="line"><span class="keyword">while</span> (condition);  <span class="comment">// 差 - 看起来仅仅只是 while/loop 的部分之一.</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="指针与引用表达式"><a href="#指针与引用表达式" class="headerlink" title="指针与引用表达式"></a>指针与引用表达式</h3><figure class="highlight c++"><figcaption><span>正确使用范例</span></figcaption><table><tr><td class="code"><pre><span class="line">x = *p;</span><br><span class="line">p = &amp;x;</span><br><span class="line">x = r.y;</span><br><span class="line">x = r-&gt;y;</span><br></pre></td></tr></table></figure>
+
+<p>注意:</p>
+<ul>
+<li>在访问成员时, 句点或箭头前后没有空格.</li>
+<li>指针操作符 * 或 &amp; 后没有空格.</li>
+</ul>
+<p>在声明指针变量或参数时, 星号与类型或变量名紧挨都可以:</p>
+<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="comment">// 好, 空格前置.</span></span><br><span class="line"><span class="keyword">char</span> *c;</span><br><span class="line"><span class="keyword">const</span> <span class="built_in">string</span> &amp;str;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 好, 空格后置.</span></span><br><span class="line"><span class="keyword">char</span>* c;</span><br><span class="line"><span class="keyword">const</span> <span class="built_in">string</span>&amp; str;</span><br><span class="line"></span><br><span class="line"><span class="keyword">int</span> x, *y;  <span class="comment">// 不允许 - 在多重声明中不能使用 &amp; 或 *</span></span><br><span class="line"><span class="keyword">char</span> * c;  <span class="comment">// 差 - * 两边都有空格</span></span><br><span class="line"><span class="keyword">const</span> <span class="built_in">string</span> &amp; str;  <span class="comment">// 差 - &amp; 两边都有空格.</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="布尔表达式"><a href="#布尔表达式" class="headerlink" title="布尔表达式"></a>布尔表达式</h3><p>如果一个布尔表达式超过 标准行宽, 断行方式要统一一下.</p>
+<figure class="highlight c++"><figcaption><span>逻辑与 (&&) 操作符总位于行尾</span></figcaption><table><tr><td class="code"><pre><span class="line"><span class="keyword">if</span> (this_one_thing &gt; this_other_thing &amp;&amp;</span><br><span class="line">    a_third_thing == a_fourth_thing &amp;&amp;</span><br><span class="line">    yet_another &amp;&amp; last_one) &#123;</span><br><span class="line">  ...</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="类格式"><a href="#类格式" class="headerlink" title="类格式"></a>类格式</h3><p>类声明 (下面的代码中缺少注释, 参考 类注释) 的基本格式如下:</p>
+<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">MyClass</span> :</span> <span class="keyword">public</span> OtherClass &#123;</span><br><span class="line"> <span class="keyword">public</span>:      <span class="comment">// 注意有一个空格的缩进</span></span><br><span class="line">  MyClass();  <span class="comment">// 标准的两空格缩进</span></span><br><span class="line">  <span class="function"><span class="keyword">explicit</span> <span class="title">MyClass</span><span class="params">(<span class="keyword">int</span> var)</span></span>;</span><br><span class="line">  ~MyClass() &#123;&#125;</span><br><span class="line"></span><br><span class="line">  <span class="function"><span class="keyword">void</span> <span class="title">SomeFunction</span><span class="params">()</span></span>;</span><br><span class="line">  <span class="function"><span class="keyword">void</span> <span class="title">SomeFunctionThatDoesNothing</span><span class="params">()</span> </span>&#123;</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  <span class="function"><span class="keyword">void</span> <span class="title">set_some_var</span><span class="params">(<span class="keyword">int</span> var)</span> </span>&#123; some_var_ = var; &#125;</span><br><span class="line">  <span class="function"><span class="keyword">int</span> <span class="title">some_var</span><span class="params">()</span> <span class="keyword">const</span> </span>&#123; <span class="keyword">return</span> some_var_; &#125;</span><br><span class="line"></span><br><span class="line"> <span class="keyword">private</span>:</span><br><span class="line">  <span class="function"><span class="keyword">bool</span> <span class="title">SomeInternalFunction</span><span class="params">()</span></span>;</span><br><span class="line"></span><br><span class="line">  <span class="keyword">int</span> some_var_;</span><br><span class="line">  <span class="keyword">int</span> some_other_var_;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+
+<p>注意：</p>
+<ul>
+<li>所有基类名应在 80 列限制下尽量与子类名放在同一行.</li>
+<li>关键词 public:, protected:, private: 要缩进 1 个空格.</li>
+<li>除第一个关键词 (一般是 public) 外, 其他关键词前要空一行. 如果类比较小的话也可以不空.</li>
+<li>这些关键词后不要保留空行.</li>
+<li>public 放在最前面, 然后是 protected, 最后是 private.</li>
+<li>关于声明顺序的规则请参考 声明顺序 一节.</li>
+</ul>
+<h3 id="水平留白"><a href="#水平留白" class="headerlink" title="水平留白"></a>水平留白</h3><p>水平留白的使用根据在代码中的位置决定. 永远不要在行尾添加没意义的留白.</p>
+<figure class="highlight c++"><figcaption><span>通用</span></figcaption><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">f</span><span class="params">(<span class="keyword">bool</span> b)</span> </span>&#123;  <span class="comment">// 左大括号前总是有空格.</span></span><br><span class="line">  ...</span><br><span class="line"><span class="keyword">int</span> i = <span class="number">0</span>;  <span class="comment">// 分号前不加空格.</span></span><br><span class="line"><span class="comment">// 列表初始化中大括号内的空格是可选的.</span></span><br><span class="line"><span class="comment">// 如果加了空格, 那么两边都要加上.</span></span><br><span class="line"><span class="keyword">int</span> x[] = &#123; <span class="number">0</span> &#125;;</span><br><span class="line"><span class="keyword">int</span> x[] = &#123;<span class="number">0</span>&#125;;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 继承与初始化列表中的冒号前后恒有空格.</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Foo</span> :</span> <span class="keyword">public</span> Bar &#123;</span><br><span class="line"> <span class="keyword">public</span>:</span><br><span class="line">  <span class="comment">// 对于单行函数的实现, 在大括号内加上空格</span></span><br><span class="line">  <span class="comment">// 然后是函数实现</span></span><br><span class="line">  Foo(<span class="keyword">int</span> b) : Bar(), baz_(b) &#123;&#125;  <span class="comment">// 大括号里面是空的话, 不加空格.</span></span><br><span class="line">  <span class="function"><span class="keyword">void</span> <span class="title">Reset</span><span class="params">()</span> </span>&#123; baz_ = <span class="number">0</span>; &#125;  <span class="comment">// 用括号把大括号与实现分开.</span></span><br><span class="line">    ...</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight c++"><figcaption><span>循环和条件语句</span></figcaption><table><tr><td class="code"><pre><span class="line"><span class="keyword">if</span> (b) &#123;          <span class="comment">// if 条件语句和循环语句关键字后均有空格.</span></span><br><span class="line">&#125; <span class="keyword">else</span> &#123;          <span class="comment">// else 前后有空格.</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">while</span> (test) &#123;&#125;   <span class="comment">// 圆括号内部不紧邻空格.</span></span><br><span class="line"><span class="keyword">switch</span> (i) &#123;</span><br><span class="line"><span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; <span class="number">5</span>; ++i) &#123;</span><br><span class="line"><span class="keyword">switch</span> ( i ) &#123;    <span class="comment">// 循环和条件语句的圆括号里可以与空格紧邻.</span></span><br><span class="line"><span class="keyword">if</span> ( test ) &#123;     <span class="comment">// 圆括号, 但这很少见. 总之要一致.</span></span><br><span class="line"><span class="keyword">for</span> ( <span class="keyword">int</span> i = <span class="number">0</span>; i &lt; <span class="number">5</span>; ++i ) &#123;</span><br><span class="line"><span class="keyword">for</span> ( ; i &lt; <span class="number">5</span> ; ++i) &#123;  <span class="comment">// 循环里内 ; 后恒有空格, ;  前可以加个空格.</span></span><br><span class="line"><span class="keyword">switch</span> (i) &#123;</span><br><span class="line">  <span class="keyword">case</span> <span class="number">1</span>:         <span class="comment">// switch case 的冒号前无空格.</span></span><br><span class="line">    ...</span><br><span class="line">  <span class="keyword">case</span> <span class="number">2</span>: <span class="keyword">break</span>;  <span class="comment">// 如果冒号有代码, 加个空格.</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight c++"><figcaption><span>操作符</span></figcaption><table><tr><td class="code"><pre><span class="line"><span class="comment">// 赋值运算符前后总是有空格.</span></span><br><span class="line">x = <span class="number">0</span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 其它二元操作符也前后恒有空格, 不过对于表达式的子式可以不加空格.</span></span><br><span class="line"><span class="comment">// 圆括号内部没有紧邻空格.</span></span><br><span class="line">v = w * x + y / z;</span><br><span class="line">v = w*x + y/z;</span><br><span class="line">v = w * (x + z);</span><br><span class="line"></span><br><span class="line"><span class="comment">// 在参数和一元操作符之间不加空格.</span></span><br><span class="line">x = <span class="number">-5</span>;</span><br><span class="line">++x;</span><br><span class="line"><span class="keyword">if</span> (x &amp;&amp; !y)</span><br><span class="line">  ...</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight c++"><figcaption><span>模板和转换</span></figcaption><table><tr><td class="code"><pre><span class="line"><span class="comment">// 尖括号(&lt; and &gt;) 不与空格紧邻, &lt; 前没有空格, &gt; 和 ( 之间也没有.</span></span><br><span class="line"><span class="built_in">vector</span>&lt;<span class="built_in">string</span>&gt; x;</span><br><span class="line">y = <span class="keyword">static_cast</span>&lt;<span class="keyword">char</span>*&gt;(x);</span><br><span class="line"></span><br><span class="line"><span class="comment">// 在类型与指针操作符之间留空格也可以, 但要保持一致.</span></span><br><span class="line"><span class="built_in">vector</span>&lt;<span class="keyword">char</span> *&gt; x;</span><br></pre></td></tr></table></figure>
+]]></content>
+      <categories>
+        <category>C++</category>
+      </categories>
+      <tags>
+        <tag>编程</tag>
+        <tag>技术向</tag>
+      </tags>
+  </entry>
+</search>
