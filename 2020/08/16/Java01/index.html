@@ -22,29 +22,29 @@
     var CONFIG = {"hostname":"lapati5.github.io","root":"/","scheme":"Mist","version":"7.7.2","exturl":false,"sidebar":{"position":"right","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":true,"show_result":true,"style":"mac"},"back2top":{"enable":true,"sidebar":false,"scrollpercent":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
   </script>
 
-  <meta name="description" content="本文将简述通过命令行对Java源代码进行编译运行以及打包的过程">
+  <meta name="description" content="###本文将简述通过命令行对Java源代码进行编译运行以及打包的过程###">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Java编译">
 <meta property="og:url" content="https://lapati5.github.io/2020/08/16/Java01/index.html">
 <meta property="og:site_name" content="Bug Factory">
-<meta property="og:description" content="本文将简述通过命令行对Java源代码进行编译运行以及打包的过程">
+<meta property="og:description" content="###本文将简述通过命令行对Java源代码进行编译运行以及打包的过程###">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="https://lapati5.github.io/.io//Blog/My_Blog/source/_posts/Java01/MultiTable02.png">
-<meta property="og:image" content="https://lapati5.github.io/.io//Blog/My_Blog/source/_posts/Java01/cmd01.png">
-<meta property="og:image" content="https://lapati5.github.io/.io//Blog/My_Blog/source/_posts/Java01/cmd02.png">
-<meta property="og:image" content="https://lapati5.github.io/.io//Blog/My_Blog/source/_posts/Java01/cmd03.png">
-<meta property="og:image" content="https://lapati5.github.io/.io//D:%5CBlog%5CMy_Blog%5Csource_posts%5CJava01%5CMultiTable01.png">
-<meta property="og:image" content="https://lapati5.github.io/.io//Blog/My_Blog/source/_posts/Java01/cmd04.png">
-<meta property="og:image" content="https://lapati5.github.io/.io//D:%5CBlog%5CMy_Blog%5Csource_posts%5CJava01%5Ccmd05.png">
-<meta property="og:image" content="https://lapati5.github.io/.io//D:%5CBlog%5CMy_Blog%5Csource_posts%5CJava01%5CMultiTable03.png">
-<meta property="og:image" content="https://lapati5.github.io/.io//D:%5CBlog%5CMy_Blog%5Csource_posts%5CJava01%5Ccmd06.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/Lapati5/PictureBed@main/img/20201018180217.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/Lapati5/PictureBed@main/img/20201018180133.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/Lapati5/PictureBed@main/img/20201018180306.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/Lapati5/PictureBed@main/img/20201018180322.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/Lapati5/PictureBed@main/img/20201018180325.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/Lapati5/PictureBed@main/img/20201018180327.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/Lapati5/PictureBed@main/img/20201018180334.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/Lapati5/PictureBed@main/img/20201018180342.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/Lapati5/PictureBed@main/img/20201018180337.png">
 <meta property="article:published_time" content="2020-08-15T16:01:41.000Z">
-<meta property="article:modified_time" content="2020-10-17T02:39:22.605Z">
+<meta property="article:modified_time" content="2020-10-18T13:14:10.060Z">
 <meta property="article:author" content="Lapati5">
 <meta property="article:tag" content="编程">
 <meta property="article:tag" content="技术向">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://lapati5.github.io/.io//Blog/My_Blog/source/_posts/Java01/MultiTable02.png">
+<meta name="twitter:image" content="https://cdn.jsdelivr.net/gh/Lapati5/PictureBed@main/img/20201018180217.png">
 
 <link rel="canonical" href="https://lapati5.github.io/2020/08/16/Java01/">
 
@@ -244,7 +244,7 @@
                   <i class="fa fa-calendar-check-o"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2020-10-17 10:39:22" itemprop="dateModified" datetime="2020-10-17T10:39:22+08:00">2020-10-17</time>
+                <time title="修改时间：2020-10-18 21:14:10" itemprop="dateModified" datetime="2020-10-18T21:14:10+08:00">2020-10-18</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -295,45 +295,39 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <center>本文将简述通过命令行对Java源代码进行编译运行以及打包的过程</center>
+        <center>###本文将简述通过命令行对Java源代码进行编译运行以及打包的过程###</center>
 
 <a id="more"></a>
 
-<h2 id="程序运行"><a href="#程序运行" class="headerlink" title="程序运行"></a>程序运行</h2><p><strong>Step1:</strong></p>
-<p>在文本编辑器vscode中编写乘法表程序</p>
-<img src="/.io//Blog\My_Blog\source\_posts\Java01\MultiTable02.png" style="zoom:67%;">
-
+<h2 id="1-程序运行"><a href="#1-程序运行" class="headerlink" title="1. 程序运行"></a>1. 程序运行</h2><p><strong>Step 1：</strong>在文本编辑器vscode中编写乘法表程序</p>
+<p><img src="https://cdn.jsdelivr.net/gh/Lapati5/PictureBed@main/img/20201018180217.png" alt=""></p>
 <figure class="highlight java"><figcaption><span>乘法表</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> java.util.Scanner;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">MultiTable</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;    </span><br><span class="line">        Scanner in = <span class="keyword">new</span> Scanner(System.in);</span><br><span class="line">        System.out.print(<span class="string">"Please input a number: "</span>);</span><br><span class="line">        <span class="keyword">int</span> num = in.nextInt();</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; i &lt;= num; ++i) &#123;</span><br><span class="line">            <span class="keyword">for</span> (<span class="keyword">int</span> s = <span class="number">1</span>; s &lt; i; ++s) &#123;</span><br><span class="line">                System.out.print(<span class="string">"   "</span>);</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">for</span> (<span class="keyword">int</span> j = i; j &lt;= num; ++j) &#123;</span><br><span class="line">                System.out.printf(<span class="string">"%2d "</span>, i * j);</span><br><span class="line">            &#125;</span><br><span class="line">            System.out.println();</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-<p><strong>Step2:</strong></p>
-<p>打开cmd</p>
-<img src="/.io//Blog\My_Blog\source\_posts\Java01\cmd01.png" style="zoom:67%;">
+<p><strong>Step 2：</strong>打开cmd</p>
+<img src="https://cdn.jsdelivr.net/gh/Lapati5/PictureBed@main/img/20201018180133.png" style="zoom:67%;" />
 
-<p><strong>Step3:</strong> </p>
-<p>进入MultiTable.java所在的目录</p>
-<img src="/.io//Blog\My_Blog\source\_posts\Java01\cmd02.png" style="zoom:67%;">
+<p><strong>Step3：</strong>进入MultiTable.java所在的目录</p>
+<img src="https://cdn.jsdelivr.net/gh/Lapati5/PictureBed@main/img/20201018180306.png" style="zoom:67%;" />
 
-<p><strong>Step4:</strong> </p>
-<p>输入命令<code>javac MultiTable.java</code>进行编译源代码</p>
-<img src="/.io//Blog\My_Blog\source\_posts\Java01\cmd03.png" style="zoom: 67%;">
+<p><strong>Step4:</strong> 输入命令<code>javac MultiTable.java</code>进行编译源代码</p>
+<img src="https://cdn.jsdelivr.net/gh/Lapati5/PictureBed@main/img/20201018180322.png" style="zoom: 67%;" />
 
-<p><img src="/.io//D:%5CBlog%5CMy_Blog%5Csource_posts%5CJava01%5CMultiTable01.png" alt></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Lapati5/PictureBed@main/img/20201018180325.png" alt=""></p>
 <p>随后在当前目录下生成MultiTable.class文件</p>
-<p><strong>Step5:</strong> </p>
-<p>输入命令<code>java MultiTable</code>执行已编译好的.class文件，输入一个数字9，得到9x9乘法表输出：</p>
-<img src="/.io//Blog\My_Blog\source\_posts\Java01\cmd04.png" style="zoom: 67%;">
+<p><strong>Step5:</strong> 输入命令<code>java MultiTable</code>执行已编译好的.class文件，输入一个数字9，得到9x9乘法表输出：</p>
+<img src="https://cdn.jsdelivr.net/gh/Lapati5/PictureBed@main/img/20201018180327.png" style="zoom: 67%;" />
 
 <hr>
-<h2 id="Java编写到执行过程"><a href="#Java编写到执行过程" class="headerlink" title="Java编写到执行过程"></a>Java编写到执行过程</h2><ol>
+<h2 id="2-Java编写到执行过程"><a href="#2-Java编写到执行过程" class="headerlink" title="2. Java编写到执行过程"></a>2. Java编写到执行过程</h2><ol>
 <li>创建并编写源文件后，对源文件进行编译，生成.class文件</li>
 <li>在JVM上运行生成好的.class文件，执行文件内容</li>
 </ol>
 <hr>
-<h2 id="困难与思考"><a href="#困难与思考" class="headerlink" title="困难与思考"></a>困难与思考</h2><ul>
+<h2 id="3-困难与思考"><a href="#3-困难与思考" class="headerlink" title="3. 困难与思考"></a>3. 困难与思考</h2><ul>
 <li>在文本编译器编写程序时出现了文件名与类名不一致的低级错误(IDE的保姆式服务使人荒废😵)</li>
 <li>对代码进行调整后未重新编译便直接运行.class 文件，导致结果与上次相同，还一度以为代码有问题，最后把主要代码都注释掉，发现还是一样的输出，才意识到原来没有编译😑</li>
 </ul>
-<h2 id="Jar格式打包并运行"><a href="#Jar格式打包并运行" class="headerlink" title="Jar格式打包并运行"></a>Jar格式打包并运行</h2><p>在对 MultiTable乘法表这个程序编译和运行之后，可以通过jar命令调用JDK自带的打包工具完成打包。</p>
+<h2 id="4-Jar格式打包并运行"><a href="#4-Jar格式打包并运行" class="headerlink" title="4. Jar格式打包并运行"></a>4. Jar格式打包并运行</h2><p>在对 MultiTable乘法表这个程序编译和运行之后，可以通过jar命令调用JDK自带的打包工具完成打包。</p>
 <ol>
 <li><p>准备一个manifest.txt文件，包含</p>
 <p><code>Main-Class: MultiTable</code></p>
@@ -343,12 +337,12 @@
 </blockquote>
 </li>
 <li><p>执行命令<code>jar -cvmf manifest.txt MultiTable.jar *.class</code></p>
-<p><img src="/.io//D:%5CBlog%5CMy_Blog%5Csource_posts%5CJava01%5Ccmd05.png" alt></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Lapati5/PictureBed@main/img/20201018180334.png" alt=""></p>
 <p>随后在相同目录下生成MultiTable.jar文件</p>
-<p><img src="/.io//D:%5CBlog%5CMy_Blog%5Csource_posts%5CJava01%5CMultiTable03.png" alt></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Lapati5/PictureBed@main/img/20201018180342.png" alt=""></p>
 </li>
 <li><p>执行命令<code>java -jar MultiTable.jar</code></p>
-<p><img src="/.io//D:%5CBlog%5CMy_Blog%5Csource_posts%5CJava01%5Ccmd06.png" alt></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Lapati5/PictureBed@main/img/20201018180337.png" alt=""></p>
 <p>成功执行代码，显示出9x9乘法表</p>
 </li>
 </ol>
@@ -479,7 +473,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#程序运行"><span class="nav-number">1.</span> <span class="nav-text">程序运行</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Java编写到执行过程"><span class="nav-number">2.</span> <span class="nav-text">Java编写到执行过程</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#困难与思考"><span class="nav-number">3.</span> <span class="nav-text">困难与思考</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Jar格式打包并运行"><span class="nav-number">4.</span> <span class="nav-text">Jar格式打包并运行</span></a></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-程序运行"><span class="nav-text">1. 程序运行</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-Java编写到执行过程"><span class="nav-text">2. Java编写到执行过程</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-困难与思考"><span class="nav-text">3. 困难与思考</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-Jar格式打包并运行"><span class="nav-text">4. Jar格式打包并运行</span></a></li></ol></div>
       </div>
       <!--/noindex-->
 
@@ -542,7 +536,7 @@
 <script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
 <div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count">博客全站共15.7k字</span>
+  <span class="post-count">博客全站共15.8k字</span>
 </div>
 <div class="copyright">
   
@@ -561,7 +555,7 @@
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
-    <span title="站点阅读时长">1:13</span>
+    <span title="站点阅读时长">1:14</span>
 </div>
 
 <!--

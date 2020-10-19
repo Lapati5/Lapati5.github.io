@@ -22,39 +22,39 @@
     var CONFIG = {"hostname":"lapati5.github.io","root":"/","scheme":"Mist","version":"7.7.2","exturl":false,"sidebar":{"position":"right","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":true,"show_result":true,"style":"mac"},"back2top":{"enable":true,"sidebar":false,"scrollpercent":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
   </script>
 
-  <meta name="description" content="本文将介绍JDBC编程，实现Java与数据库的交互连接">
+  <meta name="description" content="###本文将介绍JDBC编程，实现Java与数据库的交互连接###">
 <meta property="og:type" content="article">
 <meta property="og:title" content="JDBC编程">
 <meta property="og:url" content="https://lapati5.github.io/2020/10/06/JDBC/index.html">
 <meta property="og:site_name" content="Bug Factory">
-<meta property="og:description" content="本文将介绍JDBC编程，实现Java与数据库的交互连接">
+<meta property="og:description" content="###本文将介绍JDBC编程，实现Java与数据库的交互连接###">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="https://lapati5.github.io/.io//Blog/My_Blog/source/images/java_p4/db00.png">
-<meta property="og:image" content="https://lapati5.github.io/.io//Blog/My_Blog/source/images/java_p4/db02.png">
-<meta property="og:image" content="https://lapati5.github.io/.io//Blog/My_Blog/source/images/java_p4/jdbc01.png">
-<meta property="og:image" content="https://lapati5.github.io/.io//Blog/My_Blog/source/images/java_p4/jdbc02.png">
-<meta property="og:image" content="https://lapati5.github.io/.io//Blog/My_Blog/source/images/java_p4/jdbc00.png">
-<meta property="og:image" content="https://lapati5.github.io/.io//Blog/My_Blog/source/images/java_p4/jdbc03.png">
-<meta property="og:image" content="https://lapati5.github.io/.io//Blog/My_Blog/source/images/java_p4/jdbc04.png">
-<meta property="og:image" content="https://lapati5.github.io/.io//Blog/My_Blog/source/images/java_p4/jdbc05.png">
-<meta property="og:image" content="https://lapati5.github.io/.io//Blog/My_Blog/source/images/java_p4/db03.png">
-<meta property="og:image" content="https://lapati5.github.io/.io//Blog/My_Blog/source/images/java_p4/jdbc07.png">
-<meta property="og:image" content="https://lapati5.github.io/.io//Blog/My_Blog/source/images/java_p4/jdbc08.png">
-<meta property="og:image" content="https://lapati5.github.io/.io//Blog/My_Blog/source/images/java_p4/jdbc10.png">
-<meta property="og:image" content="https://lapati5.github.io/.io//Blog/My_Blog/source/images/java_p4/jdbc11.png">
-<meta property="og:image" content="https://lapati5.github.io/.io//Blog/My_Blog/source/images/java_p4/ex00.png">
-<meta property="og:image" content="https://lapati5.github.io/.io//Blog/My_Blog/source/images/java_p4/xml00.png">
-<meta property="og:image" content="https://lapati5.github.io/.io//Blog/My_Blog/source/images/java_p4/xml01.png">
-<meta property="og:image" content="https://lapati5.github.io/.io//Blog/My_Blog/source/images/java_p4/xml02.png">
-<meta property="og:image" content="https://lapati5.github.io/.io//Blog/My_Blog/source/images/java_p4/xml03.png">
-<meta property="og:image" content="https://lapati5.github.io/.io//Blog/My_Blog/source/images/java_p4/xml04.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/Lapati5/PictureBed@main/img/20201018180522.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/Lapati5/PictureBed@main/img/20201018180529.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/Lapati5/PictureBed@main/img/20201018180537.png">
+<meta property="og:image" content="d:/Blog/My_Blog/source/images/java_p4/jdbc02.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/Lapati5/PictureBed@main/img/20201018180544.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/Lapati5/PictureBed@main/img/20201018180556.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/Lapati5/PictureBed@main/img/20201018180604.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/Lapati5/PictureBed@main/img/20201018180611.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/Lapati5/PictureBed@main/img/20201018180614.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/Lapati5/PictureBed@main/img/20201018180623.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/Lapati5/PictureBed@main/img/20201018180625.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/Lapati5/PictureBed@main/img/20201018180631.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/Lapati5/PictureBed@main/img/20201018180640.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/Lapati5/PictureBed@main/img/ex00.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/Lapati5/PictureBed@main/img/xml00.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/Lapati5/PictureBed@main/img/xml01.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/Lapati5/PictureBed@main/img/xml02.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/Lapati5/PictureBed@main/img/xml03.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/Lapati5/PictureBed@main/img/xml04.png">
 <meta property="article:published_time" content="2020-10-05T16:01:41.000Z">
-<meta property="article:modified_time" content="2020-10-16T12:32:41.290Z">
+<meta property="article:modified_time" content="2020-10-18T13:24:22.588Z">
 <meta property="article:author" content="Lapati5">
 <meta property="article:tag" content="编程">
 <meta property="article:tag" content="技术向">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://lapati5.github.io/.io//Blog/My_Blog/source/images/java_p4/db00.png">
+<meta name="twitter:image" content="https://cdn.jsdelivr.net/gh/Lapati5/PictureBed@main/img/20201018180522.png">
 
 <link rel="canonical" href="https://lapati5.github.io/2020/10/06/JDBC/">
 
@@ -254,7 +254,7 @@
                   <i class="fa fa-calendar-check-o"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2020-10-16 20:32:41" itemprop="dateModified" datetime="2020-10-16T20:32:41+08:00">2020-10-16</time>
+                <time title="修改时间：2020-10-18 21:24:22" itemprop="dateModified" datetime="2020-10-18T21:24:22+08:00">2020-10-18</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -305,36 +305,32 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <center>本文将介绍JDBC编程，实现Java与数据库的交互连接</center>
+        <center>###本文将介绍JDBC编程，实现Java与数据库的交互连接###</center>
 
 <a id="more"></a>
 
-<h2 id="代码编写"><a href="#代码编写" class="headerlink" title="代码编写"></a>代码编写</h2><blockquote>
+<h2 id="1-代码编写"><a href="#1-代码编写" class="headerlink" title="1. 代码编写"></a>1. 代码编写</h2><blockquote>
 <p>注：以下均只给出了部分代码，完整代码请见文末Github链接</p>
 </blockquote>
-<p><strong>Step 1：</strong></p>
-<p>数据库中创建学生信息(studentinfo)表单，以学生id(stu_id)为主键，加入姓名(stu_name)，班级(stu_class)的列</p>
-<img src="/.io//Blog\My_Blog\source\images\java_p4\db00.png" style="zoom:67%;">
+<h3 id="1-1-创建数据库"><a href="#1-1-创建数据库" class="headerlink" title="1.1 创建数据库"></a>1.1 创建数据库</h3><p>数据库中创建学生信息(studentinfo)表单，以学生id(stu_id)为主键，加入姓名(stu_name)，班级(stu_class)的列</p>
+<img src="https://cdn.jsdelivr.net/gh/Lapati5/PictureBed@main/img/20201018180522.png" style="zoom:67%;" />
 
 <p>往该表中增加一些信息，最终效果如下：</p>
-<img src="/.io//Blog\My_Blog\source\images\java_p4\db02.png" style="zoom:67%;">
+<img src="https://cdn.jsdelivr.net/gh/Lapati5/PictureBed@main/img/20201018180529.png" style="zoom:67%;" />
 
-<p><strong>Step 2：</strong></p>
-<p>创建Java项目JDBC_Study，并在其下新建包，包中创建JDBCDemo.java</p>
-<img src="/.io//Blog\My_Blog\source\images\java_p4\jdbc01.png" style="zoom:67%;">
+<h3 id="1-2-创建JDBC项目"><a href="#1-2-创建JDBC项目" class="headerlink" title="1.2 创建JDBC项目"></a>1.2 创建JDBC项目</h3><p>创建Java项目JDBC_Study，并在其下新建包，包中创建JDBCDemo.java</p>
+<img src="https://cdn.jsdelivr.net/gh/Lapati5/PictureBed@main/img/20201018180537.png" style="zoom:67%;" />
 
 <p>同时，在<a href="https://dev.mysql.com/downloads/connector/j/" target="_blank" rel="noopener">MySQL官网</a>下载mysql的JDBC驱动jar包，并将其解压：</p>
-<img src="/.io//Blog\My_Blog\source\images\java_p4\jdbc02.png" style="zoom:67%;">
+<img src="D:\Blog\My_Blog\source\images\java_p4\jdbc02.png" style="zoom:67%;" />
 
 <p>在IDEA中，为JDBC_Study项目导入该jar包：</p>
-<img src="/.io//Blog\My_Blog\source\images\java_p4\jdbc00.png" style="zoom:67%;">
+<img src="https://cdn.jsdelivr.net/gh/Lapati5/PictureBed@main/img/20201018180544.png" style="zoom:67%;" />
 
 <p>从而在项目的External Libraries中添加得到</p>
-<img src="/.io//Blog\My_Blog\source\images\java_p4\jdbc03.png" style="zoom:67%;">
+<img src="https://cdn.jsdelivr.net/gh/Lapati5/PictureBed@main/img/20201018180556.png" style="zoom:67%;" />
 
-<p><strong>Step 3：</strong></p>
-<p>建立JDBC连接</p>
-<ul>
+<h3 id="1-3-建立JDBC连接"><a href="#1-3-建立JDBC连接" class="headerlink" title="1.3 建立JDBC连接"></a>1.3 建立JDBC连接</h3><ul>
 <li><p>通过<code>import java.sql.*</code> 导入JDBC包</p>
 </li>
 <li><p>注册JDBC驱动程序<code>Class.forName()</code></p>
@@ -362,12 +358,11 @@
 </li>
 </ul>
 <p>随后测试运行连接成功</p>
-<img src="/.io//Blog\My_Blog\source\images\java_p4\jdbc04.png" style="zoom:67%;">
+<img src="https://cdn.jsdelivr.net/gh/Lapati5/PictureBed@main/img/20201018180604.png" style="zoom:67%;" />
 
 
 
-<p><strong>Step 4：</strong></p>
-<p>通过Statement接口实现对连接数据库的访问</p>
+<h3 id="1-4-实现对数据库访问"><a href="#1-4-实现对数据库访问" class="headerlink" title="1.4 实现对数据库访问"></a>1.4 实现对数据库访问</h3><p>通过Statement接口实现对连接数据库的访问</p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//对数据库进行访问</span></span><br><span class="line">Statement stmt = <span class="keyword">null</span>;</span><br><span class="line">statement = conn.createStatement(ResultSet.TYPE_SCROLL_INSENSITIVE,</span><br><span class="line">                                        ResultSet.CONCUR_UPDATABLE);</span><br></pre></td></tr></table></figure>
 
 <p>并通过<code>conn.setAutoCommit(false)</code>取消自动提交</p>
@@ -382,14 +377,12 @@
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">rs.close();</span><br><span class="line">stmt.close();</span><br><span class="line">conn.close();</span><br></pre></td></tr></table></figure>
 
 <p>整段代码执行结果如下</p>
-<img src="/.io//Blog\My_Blog\source\images\java_p4\jdbc05.png" style="zoom:67%;">
+<img src="https://cdn.jsdelivr.net/gh/Lapati5/PictureBed@main/img/20201018180611.png" style="zoom:67%;" />
 
 <p>最后在数据库中进行查看更改已经完成</p>
-<img src="/.io//Blog\My_Blog\source\images\java_p4\db03.png" style="zoom:67%;">
+<img src="https://cdn.jsdelivr.net/gh/Lapati5/PictureBed@main/img/20201018180614.png" style="zoom:67%;" />
 
-<p><strong>Step 5：</strong></p>
-<blockquote>
-<p>对于学生类和测试类怎么构建不是很理解😬，以下为个人理解版本😓</p>
+<h3 id="1-5-代码测试"><a href="#1-5-代码测试" class="headerlink" title="1.5 代码测试"></a>1.5 代码测试</h3><blockquote>
 <p>以下均为部分代码，完整代码请见文末Github链接</p>
 </blockquote>
 <p>构建一个学生类(Student)</p>
@@ -405,31 +398,33 @@
 <ul>
 <li>查询所有学生信息</li>
 </ul>
-<img src="/.io//Blog\My_Blog\source\images\java_p4\jdbc07.png" style="zoom:67%;">
+<img src="https://cdn.jsdelivr.net/gh/Lapati5/PictureBed@main/img/20201018180623.png" style="zoom:67%;" />
 
 <ul>
 <li>查询某个学生信息</li>
 </ul>
-<img src="/.io//Blog\My_Blog\source\images\java_p4\jdbc08.png" style="zoom:67%;">
+<img src="https://cdn.jsdelivr.net/gh/Lapati5/PictureBed@main/img/20201018180625.png" style="zoom:67%;" />
 
 <ul>
 <li>增加一条学生信息</li>
 </ul>
-<img src="/.io//Blog\My_Blog\source\images\java_p4\jdbc10.png" style="zoom:67%;">
-
-<img src="/.io//Blog\My_Blog\source\images\java_p4\jdbc11.png" style="zoom:67%;">
+<img src="https://cdn.jsdelivr.net/gh/Lapati5/PictureBed@main/img/20201018180631.png" style="zoom:67%;" />
 
 
 
-<h2 id="题后思考"><a href="#题后思考" class="headerlink" title="题后思考"></a>题后思考</h2><ul>
-<li><p>JDBC架构</p>
+<img src="https://cdn.jsdelivr.net/gh/Lapati5/PictureBed@main/img/20201018180640.png" style="zoom:67%;" />
+
+
+
+<h2 id="2-题后思考"><a href="#2-题后思考" class="headerlink" title="2.  题后思考"></a>2.  题后思考</h2><ul>
+<li><p><strong>JDBC架构</strong></p>
 <p> JDBC是通过Java语言访问数据库的一套API，其为Java应用程序与数据库之间的交互提供了桥梁，更加便利。可以通过使用JDBC接口，注册一个JDBC驱动，使用该驱动完成与各种不同种类的数据库的连接，间接执行SQL语句，完成对数据库的访问以及更改</p>
 </li>
-<li><p>异常处理</p>
+<li><p><strong>异常处理</strong></p>
 <p>出现异常，是一种程序中的常见现象，但如果不对异常进行及时的处理很可能导致程序的终止，在出现异常之后的任务也无法运行了。因此异常处理就是在异常被底层处理而被迫终止程序之前，将其拦截，自己单独处理掉。这样不仅可以更清晰的捕获异常出现的位置，也将其与正常运行的代码分离开来，提高程序的美观性，健壮性。</p>
 <p>在Java异常处理机制中，提供<strong>try</strong>（用于监听），<strong>catch</strong>（用于异常捕获），<strong>finally</strong>（主要用于资源回收），<strong>throw</strong>（抛出异常），<strong>throws</strong>（声明方法可能抛出异常）</p>
 <p>同时Java中的异常大致可分为<strong>Unchecked Exception</strong>(包括RuntimeException, Error及二者子类) &amp; <strong>Checked Exception</strong>(其余的异常)两类 ，其中Checked Exception是一般直接或间接由于资源问题引起的，必须要被捕获或声明，而RuntimeException一般是你程序本身有问题，Error是系统层面错误，一般不需要捕获或声明</p>
-<img src="/.io//Blog\My_Blog\source\images\java_p4\ex00.png" style="zoom:50%;">
+<img src="https://cdn.jsdelivr.net/gh/Lapati5/PictureBed@main/img/ex00.png" style="zoom:50%;" />
 
 
 
@@ -437,13 +432,13 @@
 </li>
 </ul>
 <hr>
-<h2 id="拓展"><a href="#拓展" class="headerlink" title="拓展"></a>拓展</h2><p>用XML文档方式来试着处理上述问题</p>
+<h2 id="3-拓展"><a href="#3-拓展" class="headerlink" title="3. 拓展"></a>3. 拓展</h2><p>用<strong>XML文档</strong>方式来试着处理上述问题</p>
 <ol>
 <li><p>在网上下载XML文档解析的jar包（dom4j.jar）</p>
-<img src="/.io//Blog\My_Blog\source\images\java_p4\xml00.png" style="zoom:67%;">
+<img src="https://cdn.jsdelivr.net/gh/Lapati5/PictureBed@main/img/xml00.png" style="zoom:67%;" />
 
 <p>并如同上文方法，导入项目中</p>
-<img src="/.io//Blog\My_Blog\source\images\java_p4\xml01.png" style="zoom:67%;">
+<img src="https://cdn.jsdelivr.net/gh/Lapati5/PictureBed@main/img/xml01.png" style="zoom:67%;" />
 </li>
 <li><p>构建Xml2DB类，完成Xml与数据库的交互</p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Xml2DB</span> </span>&#123;</span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">static</span> List&lt;Student&gt; stuList = <span class="keyword">new</span> ArrayList&lt;&gt;();</span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">static</span> Connection conn = <span class="keyword">null</span>;</span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">static</span> PreparedStatement pstmt = <span class="keyword">null</span>;</span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">static</span> String sql = <span class="keyword">null</span>;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">try</span> &#123;</span><br><span class="line">            conn = Connector.getConnection();</span><br><span class="line">            <span class="comment">/* 操作 */</span></span><br><span class="line">            System.out.println(<span class="string">"选择操作：1.增加信息\t2.删除信息\t3.更改信息\t4.查询信息"</span>);</span><br><span class="line">            <span class="keyword">int</span> op = in.nextInt();</span><br><span class="line">            <span class="keyword">switch</span> (op) &#123;</span><br><span class="line">                <span class="keyword">case</span> <span class="number">1</span> -&gt; Insert();</span><br><span class="line">                <span class="keyword">case</span> <span class="number">2</span> -&gt; Delete();</span><br><span class="line">                <span class="keyword">case</span> <span class="number">3</span> -&gt; Update();</span><br><span class="line">                <span class="keyword">case</span> <span class="number">4</span> -&gt; Select();</span><br><span class="line">            &#125;</span><br><span class="line">            conn.commit();</span><br><span class="line">            Connector.closeConnection(conn);</span><br><span class="line">        &#125; <span class="keyword">catch</span> (SQLException ex) &#123;</span><br><span class="line">            ex.printStackTrace();</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 解析XML</span></span><br><span class="line"><span class="comment">     * SAXReader可以通过多种方式读取xml数据，并返回Document格式的对象。</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@return</span> document对象</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> Document <span class="title">getDocument</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        Document doc = <span class="keyword">null</span>;</span><br><span class="line">        <span class="keyword">try</span> &#123;</span><br><span class="line">            <span class="comment">//创建解析器</span></span><br><span class="line">            SAXReader reader = <span class="keyword">new</span> SAXReader();</span><br><span class="line">            doc = reader.read(<span class="keyword">new</span> File(<span class="string">"===XML文档路径==="</span>));</span><br><span class="line">        &#125; <span class="keyword">catch</span> (DocumentException e) &#123;</span><br><span class="line">            e.printStackTrace();</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> doc;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 获取XML文档中的学生信息</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@return</span> 在XML文档中学生类的集合</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> List&lt;Student&gt; <span class="title">getInfo</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        Document doc = getDocument();</span><br><span class="line">        Element root = doc.getRootElement();</span><br><span class="line"></span><br><span class="line">        List&lt;Element&gt; student = root.elements(<span class="string">"student"</span>);</span><br><span class="line">        <span class="keyword">for</span> (Element e : student) &#123;</span><br><span class="line">            <span class="keyword">int</span> id = Integer.parseInt(e.elementText(<span class="string">"id"</span>).trim());</span><br><span class="line">            String name = e.elementText(<span class="string">"name"</span>).trim();</span><br><span class="line">            String classname = e.elementText(<span class="string">"classname"</span>).trim();</span><br><span class="line">            stuList.add(<span class="keyword">new</span> Student(id, name, classname));</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> stuList;</span><br><span class="line">    &#125;</span><br><span class="line">	<span class="comment">//查询操作</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">Select</span><span class="params">()</span> <span class="keyword">throws</span> SQLException</span>&#123; ... &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">//增加操作</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">Insert</span><span class="params">()</span> <span class="keyword">throws</span> SQLException </span>&#123; ... &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">//删除操作</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">Delete</span><span class="params">()</span> <span class="keyword">throws</span> SQLException </span>&#123; ... &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">//更改操作</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">Update</span><span class="params">()</span> <span class="keyword">throws</span> SQLException </span>&#123; ... &#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
@@ -453,18 +448,20 @@
 <figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;?xml version="1.0" encoding="UTF-8"?&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">studentinfo</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">student</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">id</span>&gt;</span> 10001 <span class="tag">&lt;/<span class="name">id</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">name</span>&gt;</span> bruce lee  <span class="tag">&lt;/<span class="name">name</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">classname</span>&gt;</span> Class01  <span class="tag">&lt;/<span class="name">classname</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">student</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">student</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">id</span>&gt;</span> 10002 <span class="tag">&lt;/<span class="name">id</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">name</span>&gt;</span> peter parker <span class="tag">&lt;/<span class="name">name</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">classname</span>&gt;</span> Class03 <span class="tag">&lt;/<span class="name">classname</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">student</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">studentinfo</span>&gt;</span></span><br></pre></td></tr></table></figure>
 
 <p>执行SELECT()方法效果如下：</p>
-<img src="/.io//Blog\My_Blog\source\images\java_p4\xml02.png" style="zoom:67%;">
+<img src="https://cdn.jsdelivr.net/gh/Lapati5/PictureBed@main/img/xml02.png" style="zoom:67%;" />
 
 <p><strong>Example 2：</strong></p>
 <figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;?xml version="1.0" encoding="UTF-8"?&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">studentinfo</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">student</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">id</span>&gt;</span> 10006 <span class="tag">&lt;/<span class="name">id</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">name</span>&gt;</span> jack ma <span class="tag">&lt;/<span class="name">name</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">classname</span>&gt;</span> Class01  <span class="tag">&lt;/<span class="name">classname</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">student</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">student</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">id</span>&gt;</span> 10007 <span class="tag">&lt;/<span class="name">id</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">name</span>&gt;</span> stephen curry <span class="tag">&lt;/<span class="name">name</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">classname</span>&gt;</span> Class03 <span class="tag">&lt;/<span class="name">classname</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">student</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">studentinfo</span>&gt;</span></span><br></pre></td></tr></table></figure>
 
 <p>执行Insert()方法效果如下</p>
-<img src="/.io//Blog\My_Blog\source\images\java_p4\xml03.png" style="zoom:67%;">
+<img src="https://cdn.jsdelivr.net/gh/Lapati5/PictureBed@main/img/xml03.png" style="zoom:67%;" />
 
-<img src="/.io//Blog\My_Blog\source\images\java_p4\xml04.png" style="zoom:67%;">
+
 
 </li>
 </ol>
+   <img src="https://cdn.jsdelivr.net/gh/Lapati5/PictureBed@main/img/xml04.png" style="zoom:67%;" />
+
 <hr>
 <blockquote>
 <p>项目源代码链接：<a href="https://github.com/Lapati5/Java-Project" target="_blank" rel="noopener">https://github.com/Lapati5/Java-Project</a></p>
@@ -593,7 +590,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#代码编写"><span class="nav-number">1.</span> <span class="nav-text">代码编写</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#题后思考"><span class="nav-number">2.</span> <span class="nav-text">题后思考</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#拓展"><span class="nav-number">3.</span> <span class="nav-text">拓展</span></a></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-代码编写"><span class="nav-text">1. 代码编写</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-1-创建数据库"><span class="nav-text">1.1 创建数据库</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-2-创建JDBC项目"><span class="nav-text">1.2 创建JDBC项目</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-3-建立JDBC连接"><span class="nav-text">1.3 建立JDBC连接</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-4-实现对数据库访问"><span class="nav-text">1.4 实现对数据库访问</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-5-代码测试"><span class="nav-text">1.5 代码测试</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-题后思考"><span class="nav-text">2.  题后思考</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-拓展"><span class="nav-text">3. 拓展</span></a></li></ol></div>
       </div>
       <!--/noindex-->
 
@@ -656,7 +653,7 @@
 <script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
 <div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count">博客全站共15.7k字</span>
+  <span class="post-count">博客全站共15.8k字</span>
 </div>
 <div class="copyright">
   
@@ -675,7 +672,7 @@
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
-    <span title="站点阅读时长">1:13</span>
+    <span title="站点阅读时长">1:14</span>
 </div>
 
 <!--

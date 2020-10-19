@@ -22,29 +22,29 @@
     var CONFIG = {"hostname":"lapati5.github.io","root":"/","scheme":"Mist","version":"7.7.2","exturl":false,"sidebar":{"position":"right","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":true,"show_result":true,"style":"mac"},"back2top":{"enable":true,"sidebar":false,"scrollpercent":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
   </script>
 
-  <meta name="description" content="以下是结合参考资料并基于个人理解对该题涉及Java内存的一些基本概念进行的简要描述">
+  <meta name="description" content="###以下是结合参考资料并基于个人理解对该题涉及Java内存的一些基本概念进行的简要描述###">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Java内存布局">
 <meta property="og:url" content="https://lapati5.github.io/2020/09/16/Java02/index.html">
 <meta property="og:site_name" content="Bug Factory">
-<meta property="og:description" content="以下是结合参考资料并基于个人理解对该题涉及Java内存的一些基本概念进行的简要描述">
+<meta property="og:description" content="###以下是结合参考资料并基于个人理解对该题涉及Java内存的一些基本概念进行的简要描述###">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="https://lapati5.github.io/.io//D:%5CBlog%5CMy_Blog%5Csource%5Cimages%5Cjava_p3%5Cobject00.png">
-<meta property="og:image" content="https://lapati5.github.io/.io//D:%5CBlog%5CMy_Blog%5Csource%5Cimages%5Cjava_p3%5Cobject01.png">
-<meta property="og:image" content="https://lapati5.github.io/.io//Blog/My_Blog/source/images/java_p3/object02.png">
-<meta property="og:image" content="https://lapati5.github.io/.io//Blog/My_Blog/source/images/java_p3/object03.png">
-<meta property="og:image" content="https://lapati5.github.io/.io//Blog/My_Blog/source/images/java_p3/code00.png">
-<meta property="og:image" content="https://lapati5.github.io/.io//Blog/My_Blog/source/images/java_p3/code01.png">
-<meta property="og:image" content="https://lapati5.github.io/.io//Blog/My_Blog/source/images/java_p3/ex00.png">
-<meta property="og:image" content="https://lapati5.github.io/.io//D:%5CBlog%5CMy_Blog%5Csource%5Cimages%5Cjava_p3%5Cex01.png">
-<meta property="og:image" content="https://lapati5.github.io/.io//D:%5CBlog%5CMy_Blog%5Csource%5Cimages%5Cjava_p3%5Cex02.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/Lapati5/PictureBed@main/img/20201018180349.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/Lapati5/PictureBed@main/img/20201018180354.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/Lapati5/PictureBed@main/img/20201018180422.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/Lapati5/PictureBed@main/img/20201018180414.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/Lapati5/PictureBed@main/img/20201018180437.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/Lapati5/PictureBed@main/img/20201018180443.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/Lapati5/PictureBed@main/img/20201018180454.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/Lapati5/PictureBed@main/img/20201018180503.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/Lapati5/PictureBed@main/img/20201018180509.png">
 <meta property="article:published_time" content="2020-09-15T16:01:41.000Z">
-<meta property="article:modified_time" content="2020-10-16T12:31:39.124Z">
+<meta property="article:modified_time" content="2020-10-18T13:19:39.455Z">
 <meta property="article:author" content="Lapati5">
 <meta property="article:tag" content="编程">
 <meta property="article:tag" content="技术向">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://lapati5.github.io/.io//D:%5CBlog%5CMy_Blog%5Csource%5Cimages%5Cjava_p3%5Cobject00.png">
+<meta name="twitter:image" content="https://cdn.jsdelivr.net/gh/Lapati5/PictureBed@main/img/20201018180349.png">
 
 <link rel="canonical" href="https://lapati5.github.io/2020/09/16/Java02/">
 
@@ -244,7 +244,7 @@
                   <i class="fa fa-calendar-check-o"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2020-10-16 20:31:39" itemprop="dateModified" datetime="2020-10-16T20:31:39+08:00">2020-10-16</time>
+                <time title="修改时间：2020-10-18 21:19:39" itemprop="dateModified" datetime="2020-10-18T21:19:39+08:00">2020-10-18</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -276,7 +276,7 @@
                 <i class="fa fa-file-word-o"></i>
               </span>
                 <span class="post-meta-item-text">本文字数：</span>
-              <span>4.8k</span>
+              <span>4.9k</span>
             </span>
             <span class="post-meta-item" title="阅读时长">
               <span class="post-meta-item-icon">
@@ -295,12 +295,11 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <center>以下是结合参考资料并基于个人理解对该题涉及Java内存的一些基本概念进行的简要描述</center>
+        <center>###以下是结合参考资料并基于个人理解对该题涉及Java内存的一些基本概念进行的简要描述###</center>
 
 <a id="more"></a>
 
-<h3 id="基本概念"><a href="#基本概念" class="headerlink" title="基本概念"></a>基本概念</h3><p><strong>虚拟机运行时的数据区：</strong></p>
-<p><img src="/.io//D:%5CBlog%5CMy_Blog%5Csource%5Cimages%5Cjava_p3%5Cobject00.png" alt></p>
+<h2 id="1-基本概念"><a href="#1-基本概念" class="headerlink" title="1. 基本概念"></a>1. 基本概念</h2><h3 id="1-1-虚拟机运行时的数据区"><a href="#1-1-虚拟机运行时的数据区" class="headerlink" title="1.1 虚拟机运行时的数据区"></a>1.1 虚拟机运行时的数据区</h3><p><img src="https://cdn.jsdelivr.net/gh/Lapati5/PictureBed@main/img/20201018180349.png" alt=""></p>
 <ul>
 <li><p>程序计数器：用于记录下一条指令的选取。</p>
 </li>
@@ -316,10 +315,8 @@
 </li>
 </ul>
 <hr>
-<p><strong>虚拟机中的对象</strong>：</p>
-<p>I.对象的创建:</p>
-<p>​    Java对象创建分为5个步骤，如下图所示：</p>
-<p><img src="/.io//D:%5CBlog%5CMy_Blog%5Csource%5Cimages%5Cjava_p3%5Cobject01.png" alt></p>
+<h3 id="1-2-虚拟机中的对象："><a href="#1-2-虚拟机中的对象：" class="headerlink" title="1.2 虚拟机中的对象："></a>1.2 虚拟机中的对象：</h3><h4 id="I-对象的创建"><a href="#I-对象的创建" class="headerlink" title="I.对象的创建:"></a>I.对象的创建:</h4><p>​    Java对象创建分为5个步骤，如下图所示：</p>
+<p><img src="https://cdn.jsdelivr.net/gh/Lapati5/PictureBed@main/img/20201018180354.png" alt=""></p>
 <ul>
 <li><p>类加载检查：虚拟机遇到new指令时搜索是否在常量池中能定位到这个类的符号引用，并检查是否已经被加载、解析和初始化过。若没有则执行相应类加载过程。</p>
 </li>
@@ -330,35 +327,30 @@
 <li><p>设置对象头：存放对象的一些信息至对象头中</p>
 </li>
 <li><p>执行初始化方法：根据实际代码内容对对象进行初始化</p>
-<p>II.对象内存布局</p>
 </li>
 </ul>
-<p>​    对象在内存中的布局可分为：对象头、实例数据、对齐填充：</p>
-<img src="/.io//Blog\My_Blog\source\images\java_p3\object02.png" style="zoom:50%;">
+<h4 id="II-对象内存布局"><a href="#II-对象内存布局" class="headerlink" title="II.对象内存布局"></a>II.对象内存布局</h4><p>​    对象在内存中的布局可分为：对象头、实例数据、对齐填充：</p>
+<img src="https://cdn.jsdelivr.net/gh/Lapati5/PictureBed@main/img/20201018180422.png" style="zoom:50%;" />
 
 <ul>
-<li><p>对象头：一部分用于存储对象运行时的一些数据，一部分是一个指针，通过该指针指向该对象所对应的对象的类</p>
-</li>
-<li><p>实例数据：包含对象存储的有效信息</p>
-</li>
-<li><p>对齐填充：由于内存起始地址的特殊要求，需要对象头部分正好是8的倍数，当数据部分不够时，用对齐填充补全</p>
-<p>III.对象访问定位</p>
-</li>
+<li>对象头：一部分用于存储对象运行时的一些数据，一部分是一个指针，通过该指针指向该对象所对应的对象的类</li>
+<li>实例数据：包含对象存储的有效信息</li>
+<li>对齐填充：由于内存起始地址的特殊要求，需要对象头部分正好是8的倍数，当数据部分不够时，用对齐填充补全</li>
 </ul>
-<p>​    对象的访问主要有<strong>使用句柄</strong>和<strong>直接指针</strong>两种：</p>
-<img src="/.io//Blog\My_Blog\source\images\java_p3\object03.png" style="zoom: 50%;">
+<h4 id="III-对象访问定位"><a href="#III-对象访问定位" class="headerlink" title="III.对象访问定位"></a>III.对象访问定位</h4><p>​    对象的访问主要有<strong>使用句柄</strong>和<strong>直接指针</strong>两种：</p>
+<img src="https://cdn.jsdelivr.net/gh/Lapati5/PictureBed@main/img/20201018180414.png" style="zoom: 50%;" />
 
 <ul>
 <li>使用句柄：相当于对于一个实例对象，在堆内的一个固定区域（句柄池）存放一个指向对象实例数据的指针和一个指向该对象类型数据的指针，引用通过两次指针定位进行访问对象</li>
 <li>直接指针：引用直接存放对象的地址，可以直接访问</li>
 </ul>
 <hr>
-<h3 id="测试代码解析"><a href="#测试代码解析" class="headerlink" title="测试代码解析"></a>测试代码解析</h3><hr>
-<p><strong>Code 1：</strong></p>
+<h2 id="2-测试代码解析"><a href="#2-测试代码解析" class="headerlink" title="2. 测试代码解析"></a>2. 测试代码解析</h2><hr>
+<h3 id="2-1-Object类"><a href="#2-1-Object类" class="headerlink" title="2.1 Object类"></a>2.1 Object类</h3><p><strong>Code 1：</strong></p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">Object o1 = <span class="keyword">new</span> Object();</span><br><span class="line">Object o2 = <span class="keyword">new</span> Object();</span><br><span class="line">Object o3 = o1;</span><br><span class="line"></span><br><span class="line">System.out.println(<span class="string">"Object Test 0的结果是："</span>+o1);	<span class="comment">//java.lang.Object@7291c18f</span></span><br><span class="line">System.out.println(<span class="string">"Object Test 1的结果是："</span>+(o1==o2));			<span class="comment">//false</span></span><br><span class="line">System.out.println(<span class="string">"Object Test 2的结果是："</span>+(o1.equals(o2)));	<span class="comment">//false</span></span><br><span class="line">System.out.println(<span class="string">"Object Test 3的结果是："</span>+(o1.equals(o3)));	<span class="comment">//true</span></span><br><span class="line">System.out.println(<span class="string">"Object Test 4的结果是："</span>+(o1==o3));			<span class="comment">//true</span></span><br><span class="line">System.out.println(<span class="string">"Object Test 5的结果是："</span>+(o2.equals(o3)));	<span class="comment">//false</span></span><br><span class="line">System.out.println(<span class="string">"Object Test 6的结果是："</span>+(o2==o3));			<span class="comment">//false</span></span><br></pre></td></tr></table></figure>
 
 <p>o1和o2都通过new建立两个不同的新的对象，新的对象生成在堆中，而o1和o2作为局部变量存放在栈中，且其作为对象引用，分别存放着二者新创建对象的地址。将o1赋值给o3，使得o3获得与o1相同的地址，指向同一个对象。</p>
-<img src="/.io//Blog\My_Blog\source\images\java_p3\code00.png" style="zoom:50%;">
+<img src="https://cdn.jsdelivr.net/gh/Lapati5/PictureBed@main/img/20201018180437.png" style="zoom:50%;" />
 
 <p><strong>由此：</strong></p>
 <p><strong>Test 0：</strong>输出的o1其实是新对象在堆中的一个地址</p>
@@ -369,11 +361,11 @@
 <p><strong>Test 5：</strong>o2和o3没有指向相同的对象，因此二者不同</p>
 <p><strong>Test 6：</strong>o2和o3拥有不同对象的地址，因此二者不相同</p>
 <hr>
-<p><strong>Code 2：</strong></p>
+<h3 id="2-2-String类"><a href="#2-2-String类" class="headerlink" title="2.2 String类"></a>2.2 String类</h3><p><strong>Code 2：</strong></p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">String s1 = <span class="string">"abc"</span>;</span><br><span class="line">String s2 = <span class="string">"abc"</span>;</span><br><span class="line">String s3 = <span class="string">"ab"</span>+<span class="string">"c"</span>;</span><br><span class="line">String s4 = <span class="string">"a"</span>+<span class="string">"b"</span>+<span class="string">"c"</span>;</span><br><span class="line">String s5 = <span class="string">"c"</span>;</span><br><span class="line">String s6 = <span class="string">"ab"</span> + s5;</span><br><span class="line">String s7 = <span class="keyword">new</span> String(<span class="string">"abc"</span>);</span><br><span class="line"></span><br><span class="line">System.out.println(<span class="string">"String Test 1的结果是："</span>+(s1==s2));				<span class="comment">//true</span></span><br><span class="line">System.out.println(<span class="string">"String Test 2的结果是："</span>+(s1==s3));				<span class="comment">//true</span></span><br><span class="line">System.out.println(<span class="string">"String Test 3的结果是："</span>+(s1==s4));				<span class="comment">//true</span></span><br><span class="line">System.out.println(<span class="string">"String Test 4的结果是："</span>+(s1==s6));				<span class="comment">//false</span></span><br><span class="line">System.out.println(<span class="string">"String Test 5的结果是："</span>+(s1.equals(s6)));		<span class="comment">//true</span></span><br><span class="line">System.out.println(<span class="string">"String Test 6的结果是："</span>+(s1==s7));				<span class="comment">//false</span></span><br><span class="line">System.out.println(<span class="string">"String Test 7的结果是："</span>+(s1.equals(s7)));		<span class="comment">//true</span></span><br></pre></td></tr></table></figure>
 
 <p>对于String类型的对象，直接使用双引号声明出来的对象会直接存储在常量池中。而只要是使用new方法，便需要在堆中创建新的对象，在使用字符串引用变量进行字符串拼接时会重新在堆中创建对象。</p>
-<img src="/.io//Blog\My_Blog\source\images\java_p3\code01.png" style="zoom:50%;">
+<img src="https://cdn.jsdelivr.net/gh/Lapati5/PictureBed@main/img/20201018180443.png" style="zoom:50%;" />
 
 <p><strong>由此：</strong></p>
 <p><strong>Test 1：</strong>s1和s2指向的都是常量池中同一个对象”abc“</p>
@@ -384,7 +376,7 @@
 <p><strong>Test 6：</strong>s1指向常量池的一个对象，而s7指向的是在堆中创建的新对象，其地址不同</p>
 <p><strong>Test 7：</strong>s1指向常量池的一个对象，而s7指向的是在堆中创建的新对象，由于String类的equals覆写后比较的是字符串的内容，二者字符串内容相同</p>
 <hr>
-<p><strong>Code 3：</strong></p>
+<h3 id="2-3-包装类"><a href="#2-3-包装类" class="headerlink" title="2.3 包装类"></a>2.3 包装类</h3><p><strong>Code 3：</strong></p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span> i1 = <span class="number">10</span>;</span><br><span class="line">Integer i2 = <span class="number">10</span>;</span><br><span class="line">Integer i3 = <span class="keyword">new</span> Integer(<span class="number">10</span>);</span><br><span class="line">Integer i4 = <span class="keyword">new</span> Integer(<span class="number">5</span>);</span><br><span class="line">Integer i5 = <span class="keyword">new</span> Integer(<span class="number">5</span>);</span><br><span class="line">Integer i6 = i4 + i5;</span><br><span class="line"></span><br><span class="line">System.out.println(<span class="string">"Integer Test 1 的结果是："</span>+(i1 == i2));			<span class="comment">//true</span></span><br><span class="line">System.out.println(<span class="string">"Integer Test 2 的结果是："</span>+(i1 == i3));			<span class="comment">//true</span></span><br><span class="line">System.out.println(<span class="string">"Integer Test 3 的结果是："</span>+(i2 == i3));			<span class="comment">//false</span></span><br><span class="line">System.out.println(<span class="string">"Integer Test 4 的结果是："</span>+(i1 == (i4+i5)));		<span class="comment">//true</span></span><br><span class="line">System.out.println(<span class="string">"Integer Test 5 的结果是："</span>+(i2 == (i4+i5)));		<span class="comment">//true</span></span><br><span class="line">System.out.println(<span class="string">"Integer Test 6 的结果是："</span>+(i3 == (i4+i5)));		<span class="comment">//true</span></span><br><span class="line">System.out.println(<span class="string">"Integer Test 7 的结果是："</span>+(i1 == i6));			<span class="comment">//true</span></span><br><span class="line">System.out.println(<span class="string">"Integer Test 8 的结果是："</span>+(i2 == i6));			<span class="comment">//true</span></span><br><span class="line">System.out.println(<span class="string">"Integer Test 9 的结果是："</span>+((i3 == i6)));		<span class="comment">//false</span></span><br><span class="line">System.out.println(<span class="string">"Integer Test 10的结果是："</span>+((i3.equals(i6))));	<span class="comment">//true</span></span><br><span class="line"></span><br><span class="line">Integer a = <span class="number">127</span>;</span><br><span class="line">Integer b = <span class="number">127</span>;</span><br><span class="line">Integer c = <span class="number">128</span>;</span><br><span class="line">Integer d = <span class="number">128</span>;</span><br><span class="line">System.out.println(<span class="string">"Integer Test 11的结果是："</span>+(a==b));				<span class="comment">//true</span></span><br><span class="line">System.out.println(<span class="string">"Integer Test 12的结果是："</span>+(c==d));				<span class="comment">//false</span></span><br></pre></td></tr></table></figure>
 
 <p>Java基本类型的包装类大部分都实现了常量池技术（Byte, Short, Interger, Long…），其默认创建了数值在[-128, 127]（即一个字节内）之间的相应类型的缓存数据，超出该范围仍然需要创建新的对象。在基本数据类型与包装类进行判等比较，+，-，*，/等运算时，包装类会进行自动拆箱为基本类型数值，其值为包装类的value。而赋值时，拆箱与装箱取决于被赋值数。</p>
@@ -405,22 +397,19 @@
 <p><strong>Test 11：</strong>数值在[-128, 127]的包装对象，对象会放在常量池中，a、b指向同一个对象</p>
 <p><strong>Test 12：</strong>数值大于127，c、d为分别在堆中新建的新对象，二者地址不同</p>
 <hr>
-<h3 id="拓展"><a href="#拓展" class="headerlink" title="拓展"></a>拓展</h3><p><strong>栈溢出代码</strong></p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">stackoverflow</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="keyword">int</span> i = <span class="number">0</span>;</span><br><span class="line">    stackoverflow();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="3-拓展"><a href="#3-拓展" class="headerlink" title="3. 拓展"></a>3. 拓展</h2><h3 id="3-1-栈溢出代码"><a href="#3-1-栈溢出代码" class="headerlink" title="3.1 栈溢出代码"></a>3.1 栈溢出代码</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">stackoverflow</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="keyword">int</span> i = <span class="number">0</span>;</span><br><span class="line">    stackoverflow();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 <p>栈中存放一些局部变量，返回地址等，则在函数中设置一个局部变量，利用无限递归使得栈溢出，运行结果图如下</p>
-<img src="/.io//Blog\My_Blog\source\images\java_p3\ex00.png" style="zoom:50%;">
+<img src="https://cdn.jsdelivr.net/gh/Lapati5/PictureBed@main/img/20201018180454.png" style="zoom:50%;" />
 
-<p><strong>堆溢出代码</strong></p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">outOfMemory</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    List&lt;<span class="keyword">byte</span>[]&gt; list = <span class="keyword">new</span> ArrayList&lt;&gt;();</span><br><span class="line">    <span class="keyword">while</span> (<span class="keyword">true</span>)&#123;</span><br><span class="line">        list.add(<span class="keyword">new</span> <span class="keyword">byte</span>[<span class="number">5</span>*<span class="number">1024</span>*<span class="number">1024</span>]);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="3-2-堆溢出代码"><a href="#3-2-堆溢出代码" class="headerlink" title="3.2 堆溢出代码"></a>3.2 堆溢出代码</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">outOfMemory</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    List&lt;<span class="keyword">byte</span>[]&gt; list = <span class="keyword">new</span> ArrayList&lt;&gt;();</span><br><span class="line">    <span class="keyword">while</span> (<span class="keyword">true</span>)&#123;</span><br><span class="line">        list.add(<span class="keyword">new</span> <span class="keyword">byte</span>[<span class="number">5</span>*<span class="number">1024</span>*<span class="number">1024</span>]);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 <p>通过不断地创建新的对象来填充堆区域，直至没有可分配的堆区域，运行结果如下</p>
-<p><img src="/.io//D:%5CBlog%5CMy_Blog%5Csource%5Cimages%5Cjava_p3%5Cex01.png" alt></p>
-<p><strong>堆内常量池溢出</strong></p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">poolOOM</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    List&lt;String&gt; list = <span class="keyword">new</span> ArrayList&lt;&gt;();</span><br><span class="line">    <span class="keyword">int</span> i = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">while</span> (<span class="keyword">true</span>) &#123;</span><br><span class="line">        list.add(String.valueOf(i++).intern());</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p><img src="https://cdn.jsdelivr.net/gh/Lapati5/PictureBed@main/img/20201018180503.png" alt=""></p>
+<h3 id="3-3-堆内常量池溢出"><a href="#3-3-堆内常量池溢出" class="headerlink" title="3.3 堆内常量池溢出"></a>3.3 堆内常量池溢出</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">poolOOM</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    List&lt;String&gt; list = <span class="keyword">new</span> ArrayList&lt;&gt;();</span><br><span class="line">    <span class="keyword">int</span> i = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">while</span> (<span class="keyword">true</span>) &#123;</span><br><span class="line">        list.add(String.valueOf(i++).intern());</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 <p>通过不断创建String类对象，填充堆内的常量池，运行结果如下</p>
-<p><img src="/.io//D:%5CBlog%5CMy_Blog%5Csource%5Cimages%5Cjava_p3%5Cex02.png" alt></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Lapati5/PictureBed@main/img/20201018180509.png" alt=""></p>
 <p>(一开始一直没有堆溢出，所以更改了一下运行时堆的内存，不然感觉跑不完😬)</p>
 
     </div>
@@ -549,7 +538,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#基本概念"><span class="nav-number">1.</span> <span class="nav-text">基本概念</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#测试代码解析"><span class="nav-number">2.</span> <span class="nav-text">测试代码解析</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#拓展"><span class="nav-number">3.</span> <span class="nav-text">拓展</span></a></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-基本概念"><span class="nav-text">1. 基本概念</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-1-虚拟机运行时的数据区"><span class="nav-text">1.1 虚拟机运行时的数据区</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-2-虚拟机中的对象："><span class="nav-text">1.2 虚拟机中的对象：</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#I-对象的创建"><span class="nav-text">I.对象的创建:</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#II-对象内存布局"><span class="nav-text">II.对象内存布局</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#III-对象访问定位"><span class="nav-text">III.对象访问定位</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-测试代码解析"><span class="nav-text">2. 测试代码解析</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#2-1-Object类"><span class="nav-text">2.1 Object类</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-2-String类"><span class="nav-text">2.2 String类</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-3-包装类"><span class="nav-text">2.3 包装类</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-拓展"><span class="nav-text">3. 拓展</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#3-1-栈溢出代码"><span class="nav-text">3.1 栈溢出代码</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-2-堆溢出代码"><span class="nav-text">3.2 堆溢出代码</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-3-堆内常量池溢出"><span class="nav-text">3.3 堆内常量池溢出</span></a></li></ol></li></ol></div>
       </div>
       <!--/noindex-->
 
@@ -612,7 +601,7 @@
 <script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
 <div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count">博客全站共15.7k字</span>
+  <span class="post-count">博客全站共15.8k字</span>
 </div>
 <div class="copyright">
   
@@ -631,7 +620,7 @@
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
-    <span title="站点阅读时长">1:13</span>
+    <span title="站点阅读时长">1:14</span>
 </div>
 
 <!--
