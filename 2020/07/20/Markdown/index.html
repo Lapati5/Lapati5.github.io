@@ -30,7 +30,7 @@
 <meta property="og:description" content="​    Markdown是一种轻量级标记语言。由于Markdown的轻量化、易读易写特性，并且对于图片，图表、数学式都有支持，目前许多网站都广泛使用Markdown来撰写帮助文档或是用于论坛上发表消息。本文将讲述Markdown的基本语法， 用于在hexo博客上撰写博文和其他文档提交。">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2020-07-20T09:15:30.000Z">
-<meta property="article:modified_time" content="2020-10-18T13:25:19.469Z">
+<meta property="article:modified_time" content="2020-11-18T02:02:25.556Z">
 <meta property="article:author" content="Lapati5">
 <meta property="article:tag" content="技术向">
 <meta property="article:tag" content="自学">
@@ -140,12 +140,12 @@
   </li>
         <li class="menu-item menu-item-categories">
 
-    <a href="/categories/" rel="section"><i class="fa fa-fw fa-th"></i>分类<span class="badge">6</span></a>
+    <a href="/categories/" rel="section"><i class="fa fa-fw fa-th"></i>分类<span class="badge">5</span></a>
 
   </li>
         <li class="menu-item menu-item-archives">
 
-    <a href="/archives/" rel="section"><i class="fa fa-fw fa-archive"></i>归档<span class="badge">8</span></a>
+    <a href="/archives/" rel="section"><i class="fa fa-fw fa-archive"></i>归档<span class="badge">7</span></a>
 
   </li>
         <li class="menu-item menu-item-links">
@@ -234,7 +234,7 @@
                   <i class="fa fa-calendar-check-o"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2020-10-18 21:25:19" itemprop="dateModified" datetime="2020-10-18T21:25:19+08:00">2020-10-18</time>
+                <time title="修改时间：2020-11-18 10:02:25" itemprop="dateModified" datetime="2020-11-18T10:02:25+08:00">2020-11-18</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -266,14 +266,14 @@
                 <i class="fa fa-file-word-o"></i>
               </span>
                 <span class="post-meta-item-text">本文字数：</span>
-              <span>1.4k</span>
+              <span>3.1k</span>
             </span>
             <span class="post-meta-item" title="阅读时长">
               <span class="post-meta-item-icon">
                 <i class="fa fa-clock-o"></i>
               </span>
                 <span class="post-meta-item-text">阅读时长 &asymp;</span>
-              <span>3 分钟</span>
+              <span>7 分钟</span>
             </span>
 
         </div>
@@ -288,8 +288,7 @@
         <p>​    Markdown是一种轻量级标记语言。由于Markdown的轻量化、易读易写特性，并且对于图片，图表、数学式都有支持，目前许多网站都广泛使用Markdown来撰写帮助文档或是用于论坛上发表消息。本文将讲述Markdown的基本语法， 用于在hexo博客上撰写博文和其他文档提交。</p>
 <a id="more"></a>
 
-<h2 id="1-基本语法"><a href="#1-基本语法" class="headerlink" title="1. 基本语法"></a>1. 基本语法</h2><hr>
-<h3 id="1-1-字体设置"><a href="#1-1-字体设置" class="headerlink" title="1.1 字体设置"></a>1.1 字体设置</h3><pre><code>*这是斜体*
+<h2 id="1-Markdown基本语法"><a href="#1-Markdown基本语法" class="headerlink" title="1. Markdown基本语法"></a>1. Markdown基本语法</h2><h3 id="1-1-字体设置"><a href="#1-1-字体设置" class="headerlink" title="1.1 字体设置"></a>1.1 字体设置</h3><pre><code>*这是斜体*
 _这也是斜体_
 **这是加粗**
 ***这是加粗斜体***
@@ -408,7 +407,80 @@ _这也是斜体_
 </tr>
 </tbody></table>
 <hr>
-<h2 id="2-在BLOG中的特殊用法"><a href="#2-在BLOG中的特殊用法" class="headerlink" title="2. 在BLOG中的特殊用法"></a>2. 在BLOG中的特殊用法</h2><h3 id="2-1-文章部署"><a href="#2-1-文章部署" class="headerlink" title="2.1 文章部署"></a>2.1 文章部署</h3>
+<h2 id="2-Hexo中的进阶用法"><a href="#2-Hexo中的进阶用法" class="headerlink" title="2. Hexo中的进阶用法"></a>2. Hexo中的进阶用法</h2><h3 id="2-1-Hexo文章部署"><a href="#2-1-Hexo文章部署" class="headerlink" title="2.1 Hexo文章部署"></a>2.1 Hexo文章部署</h3><figure class="highlight gauss"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo <span class="keyword">new</span> [layout] &lt;<span class="built_in">title</span>&gt;</span><br></pre></td></tr></table></figure>
+
+<p>如果未指定文章的布局（layout），则默认使用 <code>post</code> 布局，生成的文档存放于 <code>source\_posts\</code> 目录下</p>
+<p>Hexo 默认有三种布局：<code>post</code>、 <code>page</code> 和 <code>draft</code>，用户可以在 <code>scaffolds</code> 目录下新建文档来自定义布局格式，还可以修改站点配置文件中的 <code>default_layout</code>参数来指定生成文档时的默认布局</p>
+<p>通过以下命令将草稿发布为正式文章：</p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo publish <span class="tag">&lt;<span class="name">title</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<hr>
+<h3 id="2-2-note标签"><a href="#2-2-note标签" class="headerlink" title="2.2 note标签"></a>2.2 note标签</h3><p>通过 note 标签可以为段落添加背景色，语法如下：</p>
+<figure class="highlight routeros"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&#123;%<span class="built_in"> note </span>[class] %&#125;</span><br><span class="line">文本内容 (支持行内标签)</span><br><span class="line">&#123;% endnote %&#125;</span><br></pre></td></tr></table></figure>
+
+<p>支持的 class 种类包括 <code>default</code> <code>primary</code> <code>success</code> <code>info</code> <code>warning</code> <code>danger</code>，也可以不指定 class</p>
+<p>各种 class 种类的效果如下：</p>
+<div class="note primary">
+            <p><strong>primary</strong> note tag  </p>
+          </div>
+
+<div class="note success">
+            <p><strong>success</strong> note tag  </p>
+          </div>
+
+<div class="note info">
+            <p><strong>info</strong> note tag  </p>
+          </div>
+
+<div class="note warning">
+            <p><strong>warning</strong> note tag  </p>
+          </div>
+
+<div class="note danger">
+            <p><strong>danger</strong> note tag  </p>
+          </div>
+
+<div class="note default">
+            <p>undefined class note tag  </p>
+          </div>
+
+<hr>
+<h3 id="2-3-label标签"><a href="#2-3-label标签" class="headerlink" title="2.3 label标签"></a>2.3 label标签</h3><p>通过 label 标签可以为文字添加背景色，语法如下：</p>
+<figure class="highlight kotlin"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#123;% label [<span class="class"><span class="keyword">class</span>]<span class="meta">@text</span>  %&#125;</span></span><br></pre></td></tr></table></figure>
+
+<p>支持的 class 种类包括 <code>default</code> <code>primary</code> <code>success</code> <code>info</code> <code>warning</code> <code>danger</code>，默认使用 <code>default</code> 作为缺省</p>
+<p>使用示例如下：</p>
+<figure class="highlight puppet"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">I heard the echo, &#123;% label default@from the valleys and the heart %&#125;</span><br><span class="line">Open to the lonely soul <span class="keyword">of</span> &#123;% label info@sickle harvesting %&#125;</span><br><span class="line"><span class="keyword">Repeat</span> <span class="keyword">outrightly</span>, but also repeat the well-being of</span><br><span class="line"><span class="keyword">Eventually</span> &#123;% label warning@swaying <span class="keyword">in</span> the desert oasis %&#125;</span><br><span class="line">&#123;% label success@I believe %&#125; <span class="keyword">I</span> <span class="keyword">am</span></span><br><span class="line">&#123;% label primary@Born as the bright summer flowers %&#125;</span><br><span class="line"><span class="keyword">Do</span> <span class="keyword">not</span> <span class="keyword">withered</span> <span class="keyword">undefeated</span> <span class="keyword">fiery</span> <span class="keyword">demon</span> <span class="keyword">rule</span></span><br><span class="line"><span class="keyword">Heart</span> <span class="keyword">rate</span> <span class="keyword">and</span> <span class="keyword">breathing</span> <span class="keyword">to</span> <span class="keyword">bear</span> &#123;% label danger@the load of the cumbersome %&#125;</span><br><span class="line"><span class="keyword">Bored</span></span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>I heard the echo, <span class="label default">from the valleys and the heart</span><br>Open to the lonely soul of <span class="label info">sickle harvesting</span><br>Repeat outrightly, but also repeat the well-being of<br>Eventually <span class="label warning">swaying in the desert oasis</span></p>
+<span class="label success">I believe</span> I am
+<span class="label primary">Born as the bright summer flowers</span>
+<p>Do not withered undefeated fiery demon rule<br>Heart rate and breathing to bear <span class="label danger">the load of the cumbersome</span><br>Bored</p>
+</blockquote>
+<hr>
+<h3 id="2-4-button按钮"><a href="#2-4-button按钮" class="headerlink" title="2.4 button按钮"></a>2.4 button按钮</h3><p>通过 button 标签可以快速添加带有主题样式的按钮，语法如下：</p>
+<figure class="highlight pgsql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#123;% button /<span class="type">path</span>/<span class="keyword">to</span>/url/, <span class="type">text</span>, icon [<span class="keyword">class</span>], title %&#125;</span><br></pre></td></tr></table></figure>
+
+<p>也可简写为：</p>
+<figure class="highlight pgsql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#123;% btn /<span class="type">path</span>/<span class="keyword">to</span>/url/, <span class="type">text</span>, icon [<span class="keyword">class</span>], title %&#125;</span><br></pre></td></tr></table></figure>
+
+<p>其中， 图标 ID 来源于 <a href="https://fontawesome.com/v4.7.0/icons/" target="_blank" rel="noopener">FontAwesome</a> 。</p>
+<p>使用示例如下：</p>
+<figure class="highlight django"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="template-tag">&#123;% <span class="name">btn</span> #, 文本 %&#125;</span></span><br><span class="line"><span class="template-tag">&#123;% <span class="name">btn</span> #, 文本 &amp; 标题,, 标题 %&#125;</span></span><br><span class="line"><span class="template-tag">&#123;% <span class="name">btn</span> #, 文本 &amp; 图标, home %&#125;</span></span><br><span class="line"><span class="template-tag">&#123;% <span class="name">btn</span> #, 文本 &amp; 大图标 (固定宽度), home fa-fw fa-lg %&#125;</span></span><br></pre></td></tr></table></figure>
+
+<a class="btn" href="#">
+            文本
+          </a>
+<a class="btn" href="#" title="标题">
+            文本 & 标题
+          </a>
+<a class="btn" href="#">
+            <i class="fa fa-home"></i>文本 & 图标
+          </a>
+<a class="btn" href="#">
+            <i class="fa fa-home fa-fw fa-lg"></i>文本 & 大图标 (固定宽度)
+          </a>
     </div>
 
     
@@ -535,7 +607,7 @@ _这也是斜体_
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-基本语法"><span class="nav-text">1. 基本语法</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-1-字体设置"><span class="nav-text">1.1 字体设置</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-2-标题设置"><span class="nav-text">1.2 标题设置</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-3-链接"><span class="nav-text">1.3 链接</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-4-分割线"><span class="nav-text">1.4 分割线</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-5-代码块"><span class="nav-text">1.5 代码块</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-6-引用"><span class="nav-text">1.6 引用</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-7-列表"><span class="nav-text">1.7 列表</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-8-表格"><span class="nav-text">1.8 表格</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-在BLOG中的特殊用法"><span class="nav-text">2. 在BLOG中的特殊用法</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#2-1-文章部署"><span class="nav-text">2.1 文章部署</span></a></li></ol></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-Markdown基本语法"><span class="nav-text">1. Markdown基本语法</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-1-字体设置"><span class="nav-text">1.1 字体设置</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-2-标题设置"><span class="nav-text">1.2 标题设置</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-3-链接"><span class="nav-text">1.3 链接</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-4-分割线"><span class="nav-text">1.4 分割线</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-5-代码块"><span class="nav-text">1.5 代码块</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-6-引用"><span class="nav-text">1.6 引用</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-7-列表"><span class="nav-text">1.7 列表</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-8-表格"><span class="nav-text">1.8 表格</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-Hexo中的进阶用法"><span class="nav-text">2. Hexo中的进阶用法</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#2-1-Hexo文章部署"><span class="nav-text">2.1 Hexo文章部署</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-2-note标签"><span class="nav-text">2.2 note标签</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-3-label标签"><span class="nav-text">2.3 label标签</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-4-button按钮"><span class="nav-text">2.4 button按钮</span></a></li></ol></li></ol></div>
       </div>
       <!--/noindex-->
 
@@ -551,14 +623,14 @@ _这也是斜体_
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">8</span>
+          <span class="site-state-item-count">7</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
       <div class="site-state-item site-state-categories">
             <a href="/categories/">
           
-        <span class="site-state-item-count">6</span>
+        <span class="site-state-item-count">5</span>
         <span class="site-state-item-name">分类</span></a>
       </div>
       <div class="site-state-item site-state-tags">
@@ -598,7 +670,7 @@ _这也是斜体_
 <script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
 <div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count">博客全站共15.8k字</span>
+  <span class="post-count">博客全站共14.4k字</span>
 </div>
 <div class="copyright">
   
@@ -612,12 +684,12 @@ _这也是斜体_
     <span class="post-meta-item-icon">
       <i class="fa fa-area-chart"></i>
     </span>
-    <span title="站点总字数">33k</span>
+    <span title="站点总字数">32k</span>
     <span class="post-meta-divider">|</span>
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
-    <span title="站点阅读时长">1:14</span>
+    <span title="站点阅读时长">1:12</span>
 </div>
 
 <!--
