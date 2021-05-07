@@ -429,7 +429,7 @@ pre {
 }
 pre,
 code {
-  font-family: consolas, Menlo, monospace, "PingFang SC", "Microsoft YaHei";
+  font-family: 'Source Code Pro', consolas, Menlo, monospace, "PingFang SC", "Microsoft YaHei";
 }
 code {
   background: #eee;
@@ -1244,7 +1244,7 @@ pre .javascript .function {
 }
 .links-of-author a::before,
 .links-of-author span.exturl::before {
-  background: #fc0dac;
+  background: #1c28cd;
   border-radius: 50%;
   content: ' ';
   display: inline-block;
@@ -1563,7 +1563,7 @@ pre .javascript .function {
   }
 }
 .post-body {
-  font-family: 'Noto Sans SC', 'Lato', "PingFang SC", "Microsoft YaHei", sans-serif;
+  font-family: 'Noto Serif SC', 'Lato', "PingFang SC", "Microsoft YaHei", sans-serif;
   overflow-wrap: break-word;
   word-wrap: break-word;
 }
@@ -1865,7 +1865,7 @@ pre .javascript .function {
 }
 .posts-expand .post-meta {
   color: #999;
-  font-family: 'Noto Sans SC', 'Lato', "PingFang SC", "Microsoft YaHei", sans-serif;
+  font-family: 'Noto Serif SC', 'Lato', "PingFang SC", "Microsoft YaHei", sans-serif;
   font-size: 0.75em;
   margin: 3px 0 60px 0;
   text-align: center;
@@ -2631,12 +2631,12 @@ body {
   background-position: center;
 }
 .main-inner {
-  width: 75%;
+  width: 800px;
 }
 .content {
   border-radius: 10px;
   margin-top: 60px;
-  padding: 25px;
+  padding: 35px;
   background: rgba(255,255,255,0.8) none repeat scroll !important;
 }
 .content-wrap {
@@ -2649,7 +2649,7 @@ body {
   opacity: 0.9;
 }
 .main-inner {
-  width: 75%;
+  width: 800px;
 }
 .header-inner {
   background: rgba(255,255,255,0.9);
